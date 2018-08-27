@@ -1,15 +1,18 @@
 import * as React from 'react'
 import BuyerPage from './BuyerPage'
 import {connect} from 'react-redux';
+import {newImage} from '../actions/images'
+
 
 class BuyerPageContainer extends React.PureComponent {
 
 
   render() {
+    return(
       <div>
         <BuyerPage title="Hello!"/>
       </div>
-      }   
+    )}   
 }
 
 const mapStateToProps = (state) => ({
@@ -17,4 +20,4 @@ const mapStateToProps = (state) => ({
 })
 
 
-export default connect(mapStateToProps, {})(BuyerPageContainer)
+export default connect(mapStateToProps, { newImage })(BuyerPageContainer)
