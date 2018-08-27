@@ -8,10 +8,11 @@ class BuyerPageContainer extends React.PureComponent {
 
 
   render() {
+    return(
       <div>
         <BuyerPage title="Hello!"/>
       </div>
-      }   
+    )}   
 }
 
 const mapStateToProps = (state) => ({
