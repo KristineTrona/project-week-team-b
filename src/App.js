@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import BuyerPageContainer from 'BuyerPageContainer'
 import './App.css';
 
 class App extends Component {
