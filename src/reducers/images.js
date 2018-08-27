@@ -1,11 +1,12 @@
-import { NEW_IMAGE, MOVE_IMAGE } from '../actions/images'
+import { NEW_IMAGE } from '../actions/images'
 
 const reducer = (state = {image: {}, desired: []}, action = {}) => {
     switch (action.type) {
       case NEW_IMAGE:
-        return [...state, action.payload]
-      case MOVE_IMAGE:
-        return initialState
+        return {
+            ...state, 
+            image: {...state.image, action.payload }
+        }
     default:
       return state
     }
