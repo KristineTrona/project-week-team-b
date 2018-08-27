@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BuyerPageContainer from 'BuyerPageContainer'
+import BuyerPageContainer from '/components/BuyerPageContainer'
 import './App.css';
 
 class App extends Component {
