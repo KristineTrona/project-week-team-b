@@ -1,16 +1,18 @@
-import images from '../lib/dummyData'
+//import images from '../lib/dummyData'
 
 
 export const NEW_IMAGE = 'NEW_IMAGE'
 export const ADD_ITEM = 'ADD_ITEM'
 //export const MOVE_IMAGE = 'MOVE_IMAGE'
 
-export function newImage(images) {
+export function newImage(image) {
   return {
     type: NEW_IMAGE,
-    payload: images[0]
+    payload: image.id++
+    // payload: image.id++
   }
 }
+
 
 export function addItem(item) {
   return {
@@ -21,7 +23,6 @@ export function addItem(item) {
     }
   }
 }
-
 
 
 // export function moveImage() {
