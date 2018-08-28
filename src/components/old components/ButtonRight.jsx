@@ -1,6 +1,6 @@
 import * as React from 'react'
 import store from '../store'
-import {newImage} from '../actions/images'
+import {newImage} from '../../actions/images'
 
 // handleClick = (image) =>{
 //   console.log(image.id++)
@@ -9,7 +9,7 @@ import {newImage} from '../actions/images'
 export default class ButtonRight extends React.PureComponent{
 
 
-handleClick1 = () => {
+handleClickEvent = () => {
   this.props.handleClick()
 }
 
@@ -17,7 +17,7 @@ handleClick1 = () => {
   render(){
     return (
       <div className = "button-right">
-        <button onClick = {this.handleClick1}>Right</button>
+        <button onClick = {this.handleClickEvent}>Right</button>
       </div>
     )
   }

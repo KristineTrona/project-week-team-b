@@ -1,28 +1,32 @@
 import * as React from 'react'
 import BuyerPage from './BuyerPage'
-// import ButtonLeft from './ButtonLeft'
-// import ButtonRight from './ButtonRight'
 import {connect} from 'react-redux';
-import {newImage} from '../actions/images'
+import {showImage} from '../actions/images'
 
 
 class BuyerPageContainer extends React.PureComponent {
 
   handleClickEvent = () => {
-  return newImage(this.props.images.image)
+    //console.log(nextImage(this.props.images))
   }
 
+  componentDidMount = () =>  {
+    this.props.showImage()
+  }
+
+
   render() {
-    
+ 
     return(
       <div className = "image-and-buttons-container">
-        {/* <ButtonLeft/> */}
-        <BuyerPage title={this.props.images.image.title}
-        url={this.props.images.image.imageUrl}
-        price={this.props.images.image.price}
-        description={this.props.images.image.description}
-        handleClick={this.handleClickEvent}/>
-        {/* <ButtonRight handleClick={this.props.newImage(this.props.images.image)}/> */}
+        <BuyerPage 
+        title={this.props.images.selectedImage.title}
+        url={this.props.images.selectedImage.imageUrl}
+        price={this.props.images.selectedImage.price}
+        description={this.props.images.description}
+        condition={this.props.images.condition}
+        handleClick={this.handleClickEvent}
+        />
       </div>
     )}   
 }
@@ -32,4 +36,4 @@ const mapStateToProps = (state) => ({
 })
 
 
-export default connect(mapStateToProps, { newImage })(BuyerPageContainer)
+export default connect(mapStateToProps, { showImage })(BuyerPageContainer)
