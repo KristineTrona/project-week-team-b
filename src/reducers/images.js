@@ -1,7 +1,7 @@
 import { NEW_IMAGE, newImage } from '../actions/images'
 import images from '../lib/dummyData'
 
-const reducer = (state = images, action = {}) => {
+const reducer = (state = {image: [], desired: []}, action = {}) => {
     switch (action.type) {
       case NEW_IMAGE:
         return {...state, 
