@@ -1,7 +1,9 @@
 import images from '../lib/dummyData'
 
 
+
 export const SHOW_IMAGE = 'SHOW_IMAGE'
+export const ADD_ITEM = 'ADD_ITEM'
 
 export function showImage() {
   return {
@@ -13,11 +15,12 @@ export function showImage() {
   }
 }
 
-
-// export const NEW_IMAGE = 'NEW_IMAGE'
-// export function showOneImage(images) {
-//   return {
-//     type: SHOW_IMAGE,
-//     payload: images
-//   }
-// }
+export function addItem(item) {
+  return {
+    type: 'ADD_ITEM',
+    payload: {
+      id: Math.ceil(Math.random()*10000),
+      ...item
+    }
+  }
+}
