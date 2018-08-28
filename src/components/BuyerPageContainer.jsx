@@ -7,7 +7,7 @@ import {showImage} from '../actions/images'
 class BuyerPageContainer extends React.PureComponent {
 
   handleClickEvent = () => {
-    //console.log(showImage(this.props.images))
+    //console.log(nextImage(this.props.images))
   }
 
   componentDidMount = () =>  {
@@ -16,16 +16,16 @@ class BuyerPageContainer extends React.PureComponent {
 
 
   render() {
-    console.log(this.props.images.selectedImage)
-
+ 
     return(
       <div className = "image-and-buttons-container">
         <BuyerPage 
-        //title={this.props.images.selectedImage.title}
-        // url={this.props.images[0].imageUrl}
-        // price={this.props.images[0].price}
-        // description={this.props.images[0].description}
-        // handleClick={this.handleClickEvent}
+        title={this.props.images.selectedImage.title}
+        url={this.props.images.selectedImage.imageUrl}
+        price={this.props.images.selectedImage.price}
+        description={this.props.images.description}
+        condition={this.props.images.condition}
+        handleClick={this.handleClickEvent}
         />
       </div>
     )}   

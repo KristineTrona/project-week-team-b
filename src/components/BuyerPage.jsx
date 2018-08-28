@@ -6,7 +6,7 @@ export default function showImages (props){
         <button id = "left-button" onClick = {props.handleClick}>Left </button>
         <h1>Title: {props.title}</h1>
         <img src= {props.url} alt="item"/>
-        <p><span>Price: {props.price}</span><span>Status: {props.status}</span></p>
+        <p><span>Price: {props.price}</span><span>Condition: {props.condition}</span></p>
         <p>Description: {props.description}</p>   
         <button id = "right-button" onClick = {props.handleClick}>Right</button>    
       </div>
