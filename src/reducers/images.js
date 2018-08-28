@@ -1,5 +1,5 @@
 
-import { SHOW_IMAGE, ADD_ITEM } from '../actions/images'
+import { SHOW_IMAGE, ADD_ITEM, NEXT_ITEM } from '../actions/images'
 import images from '../lib/dummyData'
 
 const reducer = (state = {images: images, selectedImage: {}}, action = []) => {
@@ -13,6 +13,11 @@ const reducer = (state = {images: images, selectedImage: {}}, action = []) => {
         ...state,
         action.payload
         ]  
+      case NEXT_ITEM:
+        return { ...state, 
+            selectedImage: {...state.selectedImage = action.payload.selectedImage}
+          }
+        
       default:
         return state
     }

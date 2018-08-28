@@ -1,13 +1,13 @@
 import * as React from 'react'
 import BuyerPage from './BuyerPage'
 import {connect} from 'react-redux';
-import {showImage} from '../actions/images'
+import {showImage, nextItem} from '../actions/images'
 
 
 class BuyerPageContainer extends React.PureComponent {
 
   handleClickEvent = () => {
-    //console.log(nextImage(this.props.images))
+    this.props.nextItem(this.props.images.selectedImage.id)
   }
 
   componentDidMount = () =>  {
@@ -36,4 +36,4 @@ const mapStateToProps = (state) => ({
 })
 
 
-export default connect(mapStateToProps, { showImage })(BuyerPageContainer)
+export default connect(mapStateToProps, { showImage, nextItem })(BuyerPageContainer)
