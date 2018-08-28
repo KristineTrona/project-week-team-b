@@ -1,4 +1,5 @@
-import { NEW_IMAGE } from '../actions/images'
+import { NEW_IMAGE, newImage } from '../actions/images'
+import images from '../lib/dummyData'
 
 const reducer = (state = {image: [], desired: []}, action = {}) => {
     switch (action.type) {
@@ -12,3 +13,13 @@ const reducer = (state = {image: [], desired: []}, action = {}) => {
   }
   
   export default reducer
+
+
+  function newImages(images){
+    let i=0
+    return 
+    images[i+1]
+  }
+
+  console.log(images)
+  console.log(newImages(images))
