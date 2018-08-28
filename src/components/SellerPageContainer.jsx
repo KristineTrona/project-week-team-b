@@ -6,11 +6,11 @@ import { addItem } from '../actions/images'
 
 
 class SellerPageContainer extends React.PureComponent {
-
   render() {
+    console.log("Dummy data: ",this.props.images)
     return (
     <div>
-      <SellerPage addItem={this.props.addItem} />
+      <SellerPage addItem={this.props.addItem} images={this.props.images}/>
       <ImageUpload />
     </div>
     )

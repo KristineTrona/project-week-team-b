@@ -1,5 +1,5 @@
 
-import { NEW_IMAGE, newImage, ADD_ITEM } from '../actions/images'
+import { NEW_IMAGE, ADD_ITEM } from '../actions/images'
 import images from '../lib/dummyData'
 
 const reducer = (state = images, action = {}) => {

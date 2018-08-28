@@ -18,7 +18,6 @@ export function addItem(item) {
   return {
     type: 'ADD_ITEM',
     payload: {
-      id: Math.ceil(Math.random()*10000),
       ...item
     }
   }

@@ -5,7 +5,6 @@ export default class SellerPage extends React.PureComponent {
     handleChange = (event) => {
         const value = event.target.value;
         const name = event.target.name;
-        console.log(name, value)
     
         this.setState({
           [name]: value
@@ -16,17 +15,15 @@ export default class SellerPage extends React.PureComponent {
         event.preventDefault()
         event.target.reset()
 
-        console.log(this.state)
-        console.log(this.props)
 
-
-        if (this.state.title && this.state.description && this.state.price) {
-          this.props.addItem({
-            title: this.state.name,
-            description: this.state.description,
-            price: this.state.price,
-            condition: this.state.condition,
-            category: this.state.category
+        if (this.state.title && this.state.description) {
+            this.props.addItem({
+              id: this.props.images.length +1,
+              title: this.state.title,
+              description: this.state.description,
+              price: this.state.price,
+              condition: this.state.condition,
+              category: this.state.category
           })
         } else {
             alert("Please enter a title, price and description of the item")
@@ -44,19 +41,19 @@ export default class SellerPage extends React.PureComponent {
               type="text" 
               name="title" 
               onChange={this.handleChange} />
-            </label>
+            </label><br />
             <label>
               Description:
-              <input type="text" 
+              <textarea
               name="description" 
               onChange={this.handleChange} />
-            </label>
+            </label><br />
             <label>
               Price:
               <input type="number" 
-              name="price" 
+              name="price"
               onChange={this.handleChange} />
-            </label>
+            </label><br />
             <label>
               State:
               <select name="condition" onChange={this.handleChange}>
@@ -65,7 +62,7 @@ export default class SellerPage extends React.PureComponent {
                 <option value="condition3">condition3</option>
                 <option value="condition4">condition4</option>
               </select>
-            </label>
+            </label><br />
             <label>
               Category:
               <select name="category" onChange={this.handleChange}>
@@ -73,8 +70,8 @@ export default class SellerPage extends React.PureComponent {
                 <option value="furniture">furniture</option>
                 <option value="clothes">clothes</option>
               </select>
-            </label>
-            <input type="submit" value="Submit" />
+            </label><br />
+            <input type="submit" value="Submit" /><br />
           </form>
         </div>)
       }
