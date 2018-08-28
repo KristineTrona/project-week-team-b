@@ -2,22 +2,33 @@ import * as React from 'react'
 import SellerPage from './SellerPage'
 import {connect} from 'react-redux';
 import ImageUpload from './ImageUpload'
+import { addItem } from '../actions/images'
+
 
 class SellerPageContainer extends React.PureComponent {
-
-
   render() {
-    return(
-      <div>
-        <SellerPage title="Hello!"/>
-        <ImageUpload />
-      </div>
-    )}   
+    console.log("Dummy data: ",this.props.images)
+    return (
+    <div>
+      <SellerPage addItem={this.props.addItem} images={this.props.images}/>
+      <ImageUpload />
+    </div>
+    )
+  }
 }
-
-const mapStateToProps = () => ({
   
-})
+  
+const mapStateToProps = (state) => ({
+  images: state.images
+ })
+
+export default connect(mapStateToProps, {addItem})(SellerPageContainer)
 
 
-export default connect(mapStateToProps, {})(SellerPageContainer)
+
+
+
+
+
+
+  
