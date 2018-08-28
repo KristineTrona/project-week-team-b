@@ -6,7 +6,7 @@ const dummyData = [
       imageUrl: "./images/rattle.jpg",
       description: "A nice rattle for your baby to play with.",
       price: 1,
-      state: "used",
+      condition: "used",
       category: "toy"
     },
     {
@@ -15,7 +15,7 @@ const dummyData = [
       imageUrl: "./images/crib.jpeg",
       description: "The best sleep your baby will ever have",
       price: 60,
-      state: "used",
+      condition: "used",
       category: "furniture"
     },
     {
@@ -24,7 +24,7 @@ const dummyData = [
       imageUrl: "./images/babyhat.jpg",
       description: "Cover your baby's head!",
       price: 1.50,
-      state: "new",
+      condition: "new",
       category: "clothes"
     },
     {
@@ -33,7 +33,7 @@ const dummyData = [
       imageUrl: "./images/racecar.jpg",
       description: "Super cool, tiny car, that your baby will probably not choke on!",
       price: 7,
-      state: "new",
+      condition: "new",
       category: "toy"
     }
   ]
