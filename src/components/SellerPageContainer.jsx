@@ -1,31 +1,28 @@
 import * as React from 'react'
 import SellerPage from './SellerPage'
 import {connect} from 'react-redux';
+import ImageUpload from './ImageUpload'
+import { addItem } from '../actions/images'
 
 
 class SellerPageContainer extends React.PureComponent {
-  addItem = (item) => {
-    this.props.dispatch({
-      type: 'ADD_ITEM',
-      payload: {
-        id: Math.ceil(Math.random()*10000),
-        ...item
-      }
-    })
-  }
 
   render() {
-    return <SellerPage addItem={this.addItem} />
+    return (
+    <div>
+      <SellerPage addItem={this.props.addItem} />
+      <ImageUpload />
+    </div>
+    )
   }
-  }
+}
   
   
-// const mapStateToProps = () => ({
-  
-// })
+const mapStateToProps = (state) => ({
+  images: state.images
+ })
 
-
-export default connect()(SellerPageContainer)
+export default connect(mapStateToProps, {addItem})(SellerPageContainer)
 
 
 
