@@ -1,11 +1,12 @@
-import { NEW_IMAGE, SHOW_IMAGE } from '../actions/images'
-import images from '../lib/dummyData'
+import { SHOW_IMAGE } from '../actions/images'
+// import images from '../lib/dummyData'
 
-const reducer = (state = images, action = {}) => {
+const reducer = (state = {images: [], selectedImage: null }, action = {}) => {
     switch (action.type) {
-      case NEW_IMAGE:
-        return  
-                   
+      case SHOW_IMAGE:
+        return { ...state, 
+          images: [...state.images, action.payload.images],
+          selectedImage: action.payload.selectedImage }       
     default:
       return state
     }
