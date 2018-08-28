@@ -6,7 +6,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Route exact path='/shop' component={BuyerPageContainer} />
         <BuyerPageContainer/>
+        <Route exact path='/sell' component={SellerPageContainer} />
       </div>
     );
   }
