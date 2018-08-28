@@ -1,4 +1,5 @@
 import { NEW_IMAGE } from '../actions/images'
+import images from '../lib/dummyData'
 
 const reducer = (state = {image: [], desired: []}, action = {}) => {
     switch (action.type) {
