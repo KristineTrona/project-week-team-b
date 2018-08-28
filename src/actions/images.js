@@ -1,22 +1,13 @@
+import images from '../lib/dummyData'
+
+
 export const NEW_IMAGE = 'NEW_IMAGE'
 //export const MOVE_IMAGE = 'MOVE_IMAGE'
 
-export function newImage(id,
-    title,
-    imageurl,
-    description,
-    price,
-    state) {
+export function newImage(images) {
   return {
     type: NEW_IMAGE,
-    payload: {
-        id,
-        title,
-        imageurl,
-        description,
-        price,
-        state
-    }
+    payload: images[0]
   }
 }
 
@@ -27,3 +18,23 @@ export function newImage(id,
 //     }
 //   }
 
+
+
+// export function newImage(id,
+//   title,
+//   imageurl,
+//   description,
+//   price,
+//   state) {
+// return {
+//   type: NEW_IMAGE,
+//   payload: {
+//       id,
+//       title,
+//       imageurl,
+//       description,
+//       price,
+//       state
+//   }
+// }
+// }
