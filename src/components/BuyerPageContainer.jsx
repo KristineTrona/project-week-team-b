@@ -10,9 +10,12 @@ class BuyerPageContainer extends React.PureComponent {
   render() {
     return(
       <div>
-        <BuyerPage title="Hello!"/>
-      </div>
-    )}   
+        {this.props.images.filter(image => {
+          if (this.props.images.id === 1) {
+          <BuyerPage title={this.props.image}/> }})}
+          </div>
+        )
+}
 }
 
 const mapStateToProps = (state) => ({
