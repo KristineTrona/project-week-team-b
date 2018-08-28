@@ -9,15 +9,15 @@ import {newImage} from '../actions/images'
 export default class ButtonRight extends React.PureComponent{
 
 
-// handleClick = () => {
-//   console.log
-// }
+handleClick1 = () => {
+  this.props.handleClick()
+}
 
 
   render(){
     return (
       <div className = "button-right">
-        <button onClick = {this.handleClick}>Right</button>
+        <button onClick = {this.handleClick1}>Right</button>
       </div>
     )
   }

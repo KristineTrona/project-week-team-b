@@ -9,7 +9,7 @@ import {newImage} from '../actions/images'
 class BuyerPageContainer extends React.PureComponent {
 
   handleClickEvent = () => {
-  console.log("hello")
+  return newImage(this.props.images.image)
   }
 
   render() {
@@ -21,7 +21,7 @@ class BuyerPageContainer extends React.PureComponent {
         url={this.props.images.image.imageUrl}
         price={this.props.images.image.price}
         description={this.props.images.image.description}
-        handleClick={this.handleClickEvent()}/>
+        handleClick={this.handleClickEvent}/>
         {/* <ButtonRight handleClick={this.props.newImage(this.props.images.image)}/> */}
       </div>
     )}   

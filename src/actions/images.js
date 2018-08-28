@@ -7,7 +7,7 @@ export const NEW_IMAGE = 'NEW_IMAGE'
 export function newImage(image) {
   return {
     type: NEW_IMAGE,
-    payload: console.log(image)
+    payload: image.id++
     // payload: image.id++
   }
 }
