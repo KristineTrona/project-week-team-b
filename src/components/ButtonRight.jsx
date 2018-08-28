@@ -9,12 +9,8 @@ import {newImage} from '../actions/images'
 export default class ButtonRight extends React.PureComponent{
 
 
-handleClick = () => {
-  store.dispatch(newImage())
-}
-
-// handleClick = (image) =>{
-//   console.log(image.id++)
+// handleClick = () => {
+//   console.log
 // }
 
 

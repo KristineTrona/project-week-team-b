@@ -5,7 +5,7 @@ const reducer = (state = {image: images.find((image) => image.id===1), desired: 
     switch (action.type) {
       case NEW_IMAGE:
         return {...state, 
-            image: [...state.image.action.payload],
+            image: [...state.image, action.payload],
         }
     default:
       return state

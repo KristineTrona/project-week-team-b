@@ -1,15 +1,15 @@
 import * as React from 'react'
 import BuyerPage from './BuyerPage'
-import ButtonLeft from './ButtonLeft'
-import ButtonRight from './ButtonRight'
+// import ButtonLeft from './ButtonLeft'
+// import ButtonRight from './ButtonRight'
 import {connect} from 'react-redux';
 import {newImage} from '../actions/images'
 
 
 class BuyerPageContainer extends React.PureComponent {
 
-  handleClickEvent = (image) =>{
-    console.log(image.id++)
+  handleClickEvent = () => {
+  console.log("hello")
   }
 
   render() {
@@ -21,8 +21,8 @@ class BuyerPageContainer extends React.PureComponent {
         url={this.props.images.image.imageUrl}
         price={this.props.images.image.price}
         description={this.props.images.image.description}
-        handleClick={this.handleClickEvent(this.props.images.image)}/>
-        {/* <ButtonRight/> */}
+        handleClick={this.handleClickEvent()}/>
+        {/* <ButtonRight handleClick={this.props.newImage(this.props.images.image)}/> */}
       </div>
     )}   
 }

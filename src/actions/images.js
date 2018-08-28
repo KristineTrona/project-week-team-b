@@ -4,10 +4,11 @@
 export const NEW_IMAGE = 'NEW_IMAGE'
 //export const MOVE_IMAGE = 'MOVE_IMAGE'
 
-export function newImage(id) {
+export function newImage(image) {
   return {
     type: NEW_IMAGE,
-    payload: id++
+    payload: console.log(image)
+    // payload: image.id++
   }
 }
 
