@@ -2,6 +2,7 @@
 
 
 export const NEW_IMAGE = 'NEW_IMAGE'
+export const ADD_ITEM = 'ADD_ITEM'
 //export const MOVE_IMAGE = 'MOVE_IMAGE'
 
 export function newImage(image) {
@@ -13,13 +14,16 @@ export function newImage(image) {
 }
 
 
+export function addItem(item) {
+  return {
+    type: 'ADD_ITEM',
+    payload: {
+      id: Math.ceil(Math.random()*10000),
+      ...item
+    }
+  }
+}
 
-// function newImages(images){
-//   return images[i+1]
-// }
-
-// console.log(images)
-// console.log(newImages(images[0]))
 
 // export function moveImage() {
 //     return {
