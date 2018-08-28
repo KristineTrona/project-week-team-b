@@ -7,6 +7,7 @@ export default function showImages (props){
        <img src={props.item.imageUrl} alt={props.item.title}/>
         ))}>
       </div>
+      <p>test</p>
       </div>
     )
   }
