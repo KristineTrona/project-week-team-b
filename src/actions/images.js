@@ -10,8 +10,7 @@ export function showImage() {
   return {
     type: SHOW_IMAGE,
     payload: {
-      images: images,
-      selectedImage: images[0]
+      selectedImage: images.find((image) => image.id===1)
     }
   }
 }
@@ -20,17 +19,16 @@ export function addItem(item) {
   return {
     type: 'ADD_ITEM',
     payload: {
-      id: Math.ceil(Math.random()*10000),
       ...item
     }
   }
 }
 
-export function nextImage(){
+export function nextItem(currentId){
   return {
     type: 'NEXT_ITEM',
     payload: {
-      selectedImage: images[+1]
+      selectedImage: images.find((image) => image.id===currentId+1)
     }
   }
 }
