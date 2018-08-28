@@ -9,6 +9,10 @@ const reducer = (state = {images: [], selectedImage: {}}, action = []) => {
           images: [...state.images, action.payload.images],
           selectedImage: {...state.selectedImage = action.payload.selectedImage}
         }
+      case NEXT_IMAGE:
+        return {
+          
+        }
       default:
       return state
     }
