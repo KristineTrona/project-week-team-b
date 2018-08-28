@@ -1,5 +1,6 @@
 import * as React from 'react'
 
+
 export default class SellerPage extends React.PureComponent {
 
   handleChange = (event) => {
@@ -19,8 +20,9 @@ export default class SellerPage extends React.PureComponent {
 
     if (this.state.title && this.state.description) {
         this.props.addItem({
-          id: this.props.images.length +1,
+          id: this.props.images.length +1,          
           title: this.state.title,
+          imageUrl: this.props.imageURL,
           description: this.state.description,
           price: this.state.price,
           condition: this.state.condition,

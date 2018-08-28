@@ -18,7 +18,7 @@ export function showImage() {
 
 export function addItem(item) {
   return {
-    type: 'ADD_ITEM',
+    type: ADD_ITEM,
     payload: {
       ...item
     }
