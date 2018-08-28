@@ -2,6 +2,7 @@ import * as React from 'react'
 import BuyerPage from './BuyerPage'
 import {connect} from 'react-redux';
 import {showImage, nextItem, dontWantItem} from '../actions/images'
+import { Link } from 'react-router-dom'
 
 
 class BuyerPageContainer extends React.PureComponent {
@@ -32,6 +33,9 @@ class BuyerPageContainer extends React.PureComponent {
         handleClickYes={this.handleClickYesEvent}
         handleClickNo={this.handleClickNoEvent}
         />
+        <div>
+        <Link to={'/cart'}><button type="button">Cart</button></Link>
+        </div>
       </div>
     )}   
 }
