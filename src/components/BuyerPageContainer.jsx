@@ -2,7 +2,6 @@ import * as React from 'react'
 import BuyerPage from './BuyerPage'
 import {connect} from 'react-redux';
 import {showImage} from '../actions/images'
-import images from '../lib/dummyData'
 
 
 class BuyerPageContainer extends React.PureComponent {
@@ -11,13 +10,14 @@ class BuyerPageContainer extends React.PureComponent {
     //console.log(showImage(this.props.images))
   }
 
-  componentDidMount = () => {
-    console.log(showImage())
+  componentDidMount = () =>  {
+    this.props.showImage()
   }
 
 
   render() {
-    
+    console.log(this.props.images.selectedImage)
+
     return(
       <div className = "image-and-buttons-container">
         <BuyerPage 
