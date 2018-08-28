@@ -9,7 +9,11 @@ import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render(
 <Provider store={store}>
+<BrowserRouter>
   <App />
+</BrowserRouter>
 </Provider>, 
-ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
+  document.getElementById('root')
+);
 registerServiceWorker();
+
