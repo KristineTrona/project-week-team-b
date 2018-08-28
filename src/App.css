@@ -7,7 +7,7 @@
   grid-template-columns: 1fr 2fr 1fr
 }
 
-.button-left{
+#button-left{
   width: 70px;
   height: 70px;
   position: relative;
@@ -16,7 +16,7 @@
   border-radius: 50%;
 }
 
-.button-right{
+#button-right{
   width: 70px;
   height: 70px;
   position: relative;
