@@ -23,29 +23,7 @@ class Header extends React.PureComponent {
   }
 
   choosePrice = (event) => {
-    let itemPrice = event.target.textContent.toLowerCase()
-    
-    if(itemPrice === "0"){
-      this.props.filterPrice(this.props.images.images.filter(item => item.price===0))
-    } 
-    else if (itemPrice === "1-10"){
-      this.props.filterPrice(this.props.images.images.filter(item => item.price>0 && item.price <= 10))
-    }
-    else if (itemPrice === "11-20"){
-      this.props.filterPrice(this.props.images.images.filter(item => item.price>10 && item.price <= 20))
-    }
-    else if (itemPrice === "21-30"){
-      this.props.filterPrice(this.props.images.images.filter(item => item.price>20 && item.price <= 30))
-    }
-    else if (itemPrice === "31-40"){
-      this.props.filterPrice(this.props.images.images.filter(item => item.price>30 && item.price <= 40))
-    }
-    else if (itemPrice === "41-50"){
-      this.props.filterPrice(this.props.images.images.filter(item => item.price>40 && item.price <= 50))
-    }
-    else if (itemPrice === "50+"){
-      this.props.filterPrice(this.props.images.images.filter(item => item.price > 50))
-    }
+    this.props.filterPrice(event.target.textContent.toLowerCase())
   }
 
   chooseCondition = (event) => {
@@ -77,3 +55,31 @@ const mapStateToProps = (state) => ({
  })
 
 export default connect(mapStateToProps, {filterCategory, filterGender, filterAge, filterPrice, filterCondition, showImage})(Header)
+
+
+
+ // choosePrice = (event) => {
+  //   let itemPrice = event.target.textContent.toLowerCase()
+    
+  //   if(itemPrice === "0"){
+  //     this.props.filterPrice(this.props.images.images.filter(item => item.price===0))
+  //   } 
+  //   else if (itemPrice === "1-10"){
+  //     this.props.filterPrice(this.props.images.images.filter(item => item.price>0 && item.price <= 10))
+  //   }
+  //   else if (itemPrice === "11-20"){
+  //     this.props.filterPrice(this.props.images.images.filter(item => item.price>10 && item.price <= 20))
+  //   }
+  //   else if (itemPrice === "21-30"){
+  //     this.props.filterPrice(this.props.images.images.filter(item => item.price>20 && item.price <= 30))
+  //   }
+  //   else if (itemPrice === "31-40"){
+  //     this.props.filterPrice(this.props.images.images.filter(item => item.price>30 && item.price <= 40))
+  //   }
+  //   else if (itemPrice === "41-50"){
+  //     this.props.filterPrice(this.props.images.images.filter(item => item.price>40 && item.price <= 50))
+  //   }
+  //   else if (itemPrice === "50+"){
+  //     this.props.filterPrice(this.props.images.images.filter(item => item.price > 50))
+  //   }
+  // }

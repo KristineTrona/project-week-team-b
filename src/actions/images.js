@@ -71,10 +71,10 @@ export function filterAge(age){
   }
 }
 
-export function filterPrice(array){
+export function filterPrice(priceGroup){
   return {
     type: 'FILTER_PRICE',
-    payload: array
+    payload: priceGroup
   }
 }
 
