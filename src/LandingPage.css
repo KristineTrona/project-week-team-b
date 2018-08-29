@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+.grid-container {
+    display: grid;
+    grid-column-gap: 50px;
+  }
+
+.text-wrapper {
+    width: 50%; 
+    font-family: 'Lato', sans-serif;
+    margin: 0 auto;
+    background-color: aquamarine
+}
