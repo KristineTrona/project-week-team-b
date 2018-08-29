@@ -1,5 +1,22 @@
 .App {
   text-align: center;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.buyer-wrapper {
+  text-align: center;
+  background-color: blue;
+  width: 100%
+}
+
+.image-container {
+  display: grid;
+  grid-auto-rows: 1fr, 3fr, 2fr, 1fr;
+  width: 100%;
+  margin: 0;
+  text-align: center;
 }
 
 .image-and-buttons-container{
@@ -7,20 +24,35 @@
   grid-template-columns: 1fr 2fr 1fr
 }
 
-#button-left{
+.header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+div.header {
+  color: #564F4D;
+}
+
+.image-swipe img {
+  max-width: 350px;
+  max-height: 350px;
+}
+
+/* #button-left{
   width: 70px;
   height: 70px;
   position: relative;
   top: 40px;
   left: 80px;
   border-radius: 50%;
-}
+} */
 
-#button-right{
+/* #button-right{
   width: 70px;
   height: 70px;
   position: relative;
   top: 40px;
   right: 30px;
   border-radius: 50%;
-}
+} */
+
