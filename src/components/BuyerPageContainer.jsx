@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom'
 class BuyerPageContainer extends React.PureComponent {
 
   handleClickYesEvent = () => {
-    this.props.nextItem(this.props.images.selectedImage.id)
-    // localStorage.setItem(this.props.images.cart, this.props.images.selectedImage );
+    const currentIndex = this.props.images.images.findIndex(x => x.id ===this.props.images.selectedImage.id)
+    this.props.nextItem(this.props.images.images, currentIndex )
   }
 
   handleClickNoEvent = () => {

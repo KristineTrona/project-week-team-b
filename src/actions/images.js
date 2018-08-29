@@ -33,15 +33,16 @@ export function addItem(item) {
   }
 }
 
-export function nextItem(currentId){
+export function nextItem(images, index){
   return {
     type: 'NEXT_ITEM',
     payload: {
-      selectedImage: images.find((image) => image.id===currentId+1),
-      cart: images.find((image) => image.id===currentId)
+      selectedImage: images[index+1],
+      cart: images[index]
     }
   }
 }
+
 
 export function dontWantItem(currentId){
   return {

@@ -14,7 +14,9 @@ class Header extends React.PureComponent {
     this.props.filterCategory(event.target.textContent.toLowerCase())
   }
 
-  
+  chooseGender = (event) =>{
+    this.props.filterCategory(event.target.textContent.toLowerCase())
+  }
 
   componentDidUpdate = (prevProps) => {
     if (this.props.images.images !== prevProps.images.images) {
@@ -26,7 +28,7 @@ class Header extends React.PureComponent {
     return (
       <div className = "header-container">
         <DropdownCategory chooseCategory={this.chooseCategory}/>
-        <DropdownGender/>
+        <DropdownGender chooseGender={this.chooseGender}/>
         <DropdownSize/>
         <DropdownPrice/>
         <DropdownCondition/>
