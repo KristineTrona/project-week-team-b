@@ -11,7 +11,7 @@ export function showImage() {
   return {
     type: SHOW_IMAGE,
     payload: {
-      selectedImage: images.find((image) => image.id===1)
+      selectedImage: images.find((image) => image.id===1) //it takes the dummy data as 'images', not the current state. Should be changed to current state in BuyerPageContainer
     }
   }
 }
@@ -27,7 +27,7 @@ export function addItem(item) {
 
 export function nextItem(currentId){
   return {
-    type: 'NEXT_ITEM',
+    type: NEXT_ITEM,
     payload: {
       selectedImage: images.find((image) => image.id===currentId+1),
       cart: images.find((image) => image.id===currentId)
@@ -37,7 +37,7 @@ export function nextItem(currentId){
 
 export function dontWantItem(currentId){
   return {
-    type: 'DONT_ITEM',
+    type: DONT_ITEM,
     payload: {
       selectedImage: images.find((image) => image.id===currentId+1),
     }
