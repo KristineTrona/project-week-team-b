@@ -1,3 +1,4 @@
-.dropdown{
-  display:inline-block;
+.header-container{
+  display:grid;
+  grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr
 }

@@ -1,6 +1,5 @@
 import * as React from 'react'
 import '../App.css'
-//import {selectCategory} from '../actions/images'
 const FontAwesome = require('react-fontawesome');
 
 const categories = ["Toys", "Clothes", "Furniture"]
@@ -39,7 +38,7 @@ export default class selectCategory extends React.PureComponent{
 
         {listOpen && <ul className="dd-list">
           {categories.map((category) => (
-          <li onClick = {this.props.chooseCategory} className="dd-list-item" value = {category} key={category} >{category}</li>
+          <li onClick = {this.props.chooseCategory} className="dd-list-item" key={category} >{category}</li>
           ))}
         </ul>}
       </div>

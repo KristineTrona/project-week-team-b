@@ -12,20 +12,9 @@ class Header extends React.PureComponent {
 
   chooseCategory = (event) =>{
     this.props.filterCategory(event.target.textContent.toLowerCase())
-    // console.log(this.props.showImage(this.props.images.images))
-    // setInterval(console.log(this.props.images.images),1000)
   }
 
-  // chooseCategory = (event) =>{
-  //     this.props.filterCategory(event.target.textContent.toLowerCase())
-  //     .then ((response) => console.log(this.props.showImage(response)))
-  //   }
-
-  // chooseCategory = (event) =>{
-  //   return new Promise(() => this.props.filterCategory(event.target.textContent.toLowerCase()))
-  //   .then((value) => this.props.showImage(value))
-  // }
-
+  
 
   componentDidUpdate = (prevProps) => {
     if (this.props.images.images !== prevProps.images.images) {
@@ -33,10 +22,9 @@ class Header extends React.PureComponent {
     }
   }
 
-
   render() {
     return (
-      <div>
+      <div className = "header-container">
         <DropdownCategory chooseCategory={this.chooseCategory}/>
         <DropdownGender/>
         <DropdownSize/>
