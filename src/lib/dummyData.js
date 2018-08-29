@@ -7,7 +7,7 @@ const dummyData = [
       description: "A nice rattle for your baby to play with.",
       price: 1,
       condition: "used",
-      category: "toy",
+      category: "toys",
       age: "0-2",
       gender: "uni",
       userId: 1
@@ -44,7 +44,7 @@ const dummyData = [
       description: "Super cool race car! My boy never played with it, so it is brand-new",
       price: 7,
       condition: "brand-new",
-      category: "toy",
+      category: "toys",
       age: "2-4",
       gender: "boy",
       userId: 2
@@ -107,7 +107,7 @@ const dummyData = [
       description: "A box of legos for your kid to build his dream cities to life!",
       price: 5,
       condition: "acceptable",
-      category: "toy",
+      category: "toys",
       age: "6+",
       gender: "boy",
       userId: 3
@@ -144,7 +144,7 @@ const dummyData = [
       description: "My kid does not use it anymore, because it grew up. Maybe useful for some other new mom?",
       price: 0,
       condition: "acceptable",
-      category: "toy",
+      category: "toys",
       age: "0-2",
       gender: "uni",
       userId: 2
@@ -157,7 +157,7 @@ const dummyData = [
       description: "If your daughter likes frozen then she will love this doll! My daughter played with it for only a week, so it is as good as new!",
       price: 8,
       condition: "brand-new",
-      category: "toy",
+      category: "toys",
       age: "4-6",
       gender: "girl",
       userId: 3
@@ -194,7 +194,7 @@ const dummyData = [
       description: "My kid never plays with it anymore. Maybe some other mom wants it for free.",
       price: 0,
       condition: "new",
-      category: "toy",
+      category: "toys",
       age: "4-6",
       gender: "boy",
       userId: 4
@@ -244,7 +244,7 @@ const dummyData = [
       description: "A few puzzles suitable for the little one. Good for kid's development!",
       price: 5,
       condition: "used",
-      category: "toy",
+      category: "toys",
       age: "2-4",
       gender: "uni",
       userId: 5

@@ -50,26 +50,34 @@ export function dontWantItem(currentId){
 
 
 export function filterCategory(category){
-  if (category === "toy"){ 
-    return {   
-      type: 'FILTER_CATEGORY',
-      payload: "toy"    
+      return {   
+        type: 'FILTER_CATEGORY',
+        payload: category  
+      }
     }
-  }
-  else if (category === "clothes"){ 
-    return {   
-      type: 'FILTER_CATEGORY',
-      payload: "clothes" 
-    }
-  }
-  else if (category === "furniture"){ 
-    return {   
-      type: 'FILTER_CATEGORY',
-      payload: "furniture"  
-    }
-  }
 
-}
+
+// export function filterCategory(category){
+//   if (category === "toy"){ 
+//     return {   
+//       type: 'FILTER_CATEGORY',
+//       payload: "toy"    
+//     }
+//   }
+//   else if (category === "clothes"){ 
+//     return {   
+//       type: 'FILTER_CATEGORY',
+//       payload: "clothes" 
+//     }
+//   }
+//   else if (category === "furniture"){ 
+//     return {   
+//       type: 'FILTER_CATEGORY',
+//       payload: "furniture"  
+//     }
+//   }
+
+// }
 
 export function filterGender(gender){
   return {

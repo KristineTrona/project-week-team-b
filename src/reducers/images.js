@@ -24,9 +24,14 @@ const reducer = (state = {images: images, selectedImage: {}, cart:[]}, action = 
         selectedImage: {...state.selectedImage = action.payload.selectedImage}
         }
       case FILTER_CATEGORY:
-        return{
-          ...state.images.filter((item) => item.category===action.payload )
+        return{...state,
+          images: images.filter((item) => item.category===action.payload )
         }
+        // case FILTER_CATEGORY:
+        // return{
+        //   ...state.images.filter((item) => item.category===action.payload )
+        // }
+
       case FILTER_GENDER:
         return{
 

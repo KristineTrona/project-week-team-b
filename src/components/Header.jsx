@@ -11,7 +11,7 @@ import {filterCategory} from '../actions/images'
 class Header extends React.PureComponent {
 
   chooseCategory = (event) =>{
-    console.log(this.props.filterCategory(event.target.textContent.toLowerCase()))
+    this.props.filterCategory(event.target.textContent.toLowerCase())
   }
 
 
