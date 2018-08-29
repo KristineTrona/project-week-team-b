@@ -1,6 +1,6 @@
 import * as React from 'react'
 import '../App.css'
-const FontAwesome = require('react-fontawesome');
+let FontAwesome = require('react-fontawesome');
 
 const categories = ["Toys", "Clothes", "Furniture"]
 
@@ -27,8 +27,8 @@ export default class selectCategory extends React.PureComponent{
 
       const{listOpen} = this.state
       return (
-      <div className = "dd-wrapper">
-        <div className="dd-header" onClick={() => this.toggleList()}>
+      <div className = "dd-wrapper" onClick={() => this.toggleList()}>
+        <div className="dd-header" >
           <div className="dd-header-title">Product</div>
           {listOpen
           ? <FontAwesome name="angle-up" size="2x"/>
