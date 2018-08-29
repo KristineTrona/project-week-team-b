@@ -27,8 +27,8 @@ export default class selectCPrice extends React.PureComponent{
 
       const{listOpen} = this.state
       return (
-      <div className = "dd-wrapper">
-        <div className="dd-header" onClick={() => this.toggleList()}>
+      <div className = "dd-wrapper" onClick={() => this.toggleList()}>
+        <div className="dd-header">
           <div className="dd-header-title">Price</div>
           {listOpen
           ? <FontAwesome name="angle-up" size="2x"/>
