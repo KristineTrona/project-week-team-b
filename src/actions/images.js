@@ -11,14 +11,18 @@ export const FILTER_SIZE = 'FILTER_SIZE'
 export const FILTER_PRICE = 'FILTER_PRICE'
 export const FILTER_CONDITION = 'FILTER_CONDITION'
 
-export function showImage() {
+export function showImage(imagesArray) {
   return {
     type: SHOW_IMAGE,
     payload: {
-      selectedImage: images.find((image) => image.id===1)
+      selectedImage: imagesArray[0]
     }
   }
 }
+
+// payload: {
+//   selectedImage: images.find((image) => image.id===1)
+// }
 
 export function addItem(item) {
   return {
@@ -56,28 +60,6 @@ export function filterCategory(category){
       }
     }
 
-
-// export function filterCategory(category){
-//   if (category === "toy"){ 
-//     return {   
-//       type: 'FILTER_CATEGORY',
-//       payload: "toy"    
-//     }
-//   }
-//   else if (category === "clothes"){ 
-//     return {   
-//       type: 'FILTER_CATEGORY',
-//       payload: "clothes" 
-//     }
-//   }
-//   else if (category === "furniture"){ 
-//     return {   
-//       type: 'FILTER_CATEGORY',
-//       payload: "furniture"  
-//     }
-//   }
-
-// }
 
 export function filterGender(gender){
   return {

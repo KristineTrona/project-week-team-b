@@ -18,7 +18,7 @@ class BuyerPageContainer extends React.PureComponent {
   }
 
   componentDidMount = () =>  {
-    this.props.showImage()
+    this.props.showImage(this.props.images.images)
   }
 
 
