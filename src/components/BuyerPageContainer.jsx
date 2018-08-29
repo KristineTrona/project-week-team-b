@@ -10,7 +10,7 @@ class BuyerPageContainer extends React.PureComponent {
 
   handleClickYesEvent = () => {
     this.props.nextItem(this.props.images.selectedImage.id)
-    localStorage.setItem(this.props.images.cart, this.props.images.selectedImage );
+    // localStorage.setItem(this.props.images.cart, this.props.images.selectedImage );
   }
 
   handleClickNoEvent = () => {
