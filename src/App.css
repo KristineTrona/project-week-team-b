@@ -1,11 +1,10 @@
 .App {
   text-align: center;
   margin: 0;
-  height: 100%;
   width: 100%;
 }
 
-.buyer-wrapper {
+.wrapper {
   text-align: center;
   width: 100%
 }
@@ -25,6 +24,7 @@
 .header {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 6%;
 }
 
 div.header {
@@ -54,8 +54,16 @@ div.header {
 
 .footer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr)
+  grid-template-columns: repeat(2, 1fr);
+  background-color: lightgray;
+  padding: 20px;
 }
+
+.footer-text {
+  text-align: left
+
+}
+
 
 /* #button-left{
   width: 70px;
