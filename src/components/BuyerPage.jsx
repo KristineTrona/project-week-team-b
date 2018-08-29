@@ -14,9 +14,9 @@ export default function showImages (props){
           <div>Condition</div>
         </div>
         <div className = "image-swipe"></div>
-          <button id = "left-button" onClick = {props.handleClickYes}>Left </button>
+          <button id = "left-button" onClick = {props.handleClickNo}>Left </button>
           <img src= {props.url} alt="item"/>
-          <button id = "right-button" onClick = {props.handleClickNo}>Right</button>
+          <button id = "right-button" onClick = {props.handleClickYes}>Right</button> 
         </div>
         <div className = "product-swipe-info">
           <div className = "description-container">

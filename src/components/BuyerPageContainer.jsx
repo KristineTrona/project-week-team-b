@@ -1,13 +1,18 @@
 import * as React from 'react'
 import BuyerPage from './BuyerPage'
 import {connect} from 'react-redux';
-import {showImage, nextItem} from '../actions/images'
+import {showImage, nextItem, dontWantItem} from '../actions/images'
+import { Link } from 'react-router-dom'
 
 
 class BuyerPageContainer extends React.PureComponent {
 
-  handleClickEvent = () => {
+  handleClickYesEvent = () => {
     this.props.nextItem(this.props.images.selectedImage.id)
+  }
+
+  handleClickNoEvent = () => {
+    this.props.dontWantItem(this.props.images.selectedImage.id)
   }
 
   componentDidMount = () =>  {
@@ -25,8 +30,12 @@ class BuyerPageContainer extends React.PureComponent {
         price={this.props.images.selectedImage.price}
         description={this.props.images.description}
         condition={this.props.images.condition}
-        handleClick={this.handleClickEvent}
+        handleClickYes={this.handleClickYesEvent}
+        handleClickNo={this.handleClickNoEvent}
         />
+        <div>
+        <Link to={'/cart'}><button type="button">Cart</button></Link>
+        </div>
       </div>
     )}   
 }
@@ -36,4 +45,4 @@ const mapStateToProps = (state) => ({
 })
 
 
-export default connect(mapStateToProps, { showImage, nextItem })(BuyerPageContainer)
+export default connect(mapStateToProps, { showImage, nextItem, dontWantItem })(BuyerPageContainer)
