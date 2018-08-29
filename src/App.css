@@ -1,35 +1,103 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Lato|Schoolbell');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  grid-area: header;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  font-size: 72px;
+  font-family: 'Schoolbell', cursive;
+}
+
+.header img {
+  float: left;
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: lightblue;
+}
+
+/* Style the topnav links */
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  background-color: #ddd;
+  padding: 10px;
+  height: 200px; /* Should be removed. Only for demonstration */
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+
+
+
+/* .App {
   text-align: center;
   margin: 0;
+  height: 100%;
   width: 100%;
 }
 
 .wrapper {
   text-align: center;
-  width: 100%
+  width: 100%;
 }
 
-.image-container {
+.image-container { */
  /* display: grid;*/
   /*grid-auto-rows: 1fr, 3fr, 2fr, 1fr;*/
-  margin: 0;
-  text-align: center;
-}
+  /* margin: 0; */
+  /* text-align: center; */
+/* } */
 
 /*.image-and-buttons-container{
   display:grid;
   grid-template-columns: 1fr 2fr 1fr
 }*/
 
-.header {
+/* .header {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   margin-bottom: 6%;
-}
+ }
 
 div.header {
   color: #564F4D;
-  font-family: lato;
+  font-family:'Lato', sans-serif;
   font-style: regular;
   font-size: 26px;
   line-height: 31px;
@@ -46,40 +114,63 @@ div.header {
   max-height: 350px;
 }
 
+.product-swipe-info {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  margin-bottom: 5%;
+}
+
 .description-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 500px;
+  width: 50%;
+  margin: 0 auto;
+  border: solid black;
 }
 
-.footer {
+.description-container div {
+  margin: 0 auto;
+}
+
+.description-icon-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-color: lightgray;
-  padding: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 50%;
+  margin: 0 auto;
+}
+.description-icon-container div {
+  height: 60px;
+  width: 60px;
 }
 
-.footer-text {
-  text-align: left
-
+.shopping-basket {
+  background-image: url(./lib/images/shoppingbasket.svg)
 }
 
+.pricetag {
+  background-image: url(./lib/images/pricetag.svg)
+} */ 
 
-/* #button-left{
-  width: 70px;
-  height: 70px;
-  position: relative;
-  top: 40px;
-  left: 80px;
-  border-radius: 50%;
-} */
 
-/* #button-right{
-  width: 70px;
-  height: 70px;
-  position: relative;
-  top: 40px;
-  right: 30px;
-  border-radius: 50%;
-} */
 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
