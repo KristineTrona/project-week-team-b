@@ -1,5 +1,4 @@
-import images from '../lib/dummyData'
-
+//import images from '../lib/dummyData'
 
 export const SHOW_IMAGE = 'SHOW_IMAGE'
 export const ADD_ITEM = 'ADD_ITEM'
@@ -7,7 +6,7 @@ export const NEXT_ITEM = 'NEXT_ITEM'
 export const DONT_ITEM = 'DONT_ITEM'
 export const FILTER_CATEGORY = 'FILTER_CATEGORY'
 export const FILTER_GENDER = 'FILTER_GENDER'
-export const FILTER_SIZE = 'FILTER_SIZE'
+export const FILTER_AGE = 'FILTER_AGE'
 export const FILTER_PRICE = 'FILTER_PRICE'
 export const FILTER_CONDITION = 'FILTER_CONDITION'
 
@@ -19,10 +18,6 @@ export function showImage(imagesArray) {
     }
   }
 }
-
-// payload: {
-//   selectedImage: images.find((image) => image.id===1)
-// }
 
 export function addItem(item) {
   return {
@@ -65,27 +60,21 @@ export function filterCategory(category){
 export function filterGender(gender){
   return {
     type: 'FILTER_GENDER',
-    payload: {
-     
-    }
+    payload: gender
   }
 }
 
-export function filterSize(){
+export function filterAge(age){
   return {
-    type: 'FILTER_SIZE',
-    payload: {
-      
-    }
+    type: 'FILTER_AGE',
+    payload: age
   }
 }
 
-export function filterPrice(){
+export function filterPrice(price){
   return {
     type: 'FILTER_PRICE',
-    payload: {
-      
-    }
+    payload: price
   }
 }
 

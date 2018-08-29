@@ -1,6 +1,6 @@
 
 import { SHOW_IMAGE, ADD_ITEM, NEXT_ITEM, DONT_ITEM } from '../actions/images'
-import { FILTER_CATEGORY, FILTER_GENDER, FILTER_SIZE, FILTER_PRICE, FILTER_CONDITION} from '../actions/images'
+import { FILTER_CATEGORY, FILTER_GENDER, FILTER_AGE, FILTER_PRICE, FILTER_CONDITION} from '../actions/images'
 import images from '../lib/dummyData'
 
 const reducer = (state = {images: images, selectedImage: {}, cart:[]}, action = {}) => {
@@ -24,22 +24,18 @@ const reducer = (state = {images: images, selectedImage: {}, cart:[]}, action = 
         selectedImage: {...state.selectedImage = action.payload.selectedImage}
         }
       case FILTER_CATEGORY:
-        return{...state,
+        return {...state,
           images: images.filter((item) => item.category===action.payload )
         }
-        // case FILTER_CATEGORY:
-        // return{
-        //   ...state.images.filter((item) => item.category===action.payload )
-        // }
 
       case FILTER_GENDER:
-        return{
-
+        return{...state,
+          images: images.filter((item) => item.gender===action.payload )
         }  
-      case FILTER_SIZE:
-        return{
-
-        } 
+      case FILTER_AGE:
+        return{...state,
+        images: images.filter((item) => item.age===action.payload )
+      }  
       case FILTER_PRICE:
         return{
 

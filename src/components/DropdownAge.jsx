@@ -2,9 +2,9 @@ import * as React from 'react'
 import '../App.css'
 const FontAwesome = require('react-fontawesome');
 
-const sizes = ["0-2", "2-4", "4-6", "6+"]
+const ages = ["0-2", "2-4", "4-6", "6+"]
 
-export default class selectSize extends React.PureComponent{
+export default class selectAge extends React.PureComponent{
     constructor(props){
       super(props)
       this.state = {
@@ -37,8 +37,8 @@ export default class selectSize extends React.PureComponent{
         </div>
 
         {listOpen && <ul className="dd-list">
-          {sizes.map((size) => (
-          <li onClick = {this.props.chooseSize} className="dd-list-item" key={size} >{size}</li>
+          {ages.map((age) => (
+          <li onClick = {this.props.chooseAge} className="dd-list-item" key={age} >{age}</li>
           ))}
         </ul>}
       </div>
