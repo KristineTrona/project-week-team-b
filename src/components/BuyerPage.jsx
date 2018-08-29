@@ -1,7 +1,7 @@
 import * as React from 'react'
-import Logo_1 from '../lib/images/Logo_1.svg'
 import noun_wrong_1702071 from "../lib/images/noun_wrong_1702071.svg"
 import noun_like_1702075 from "../lib/images/noun_like_1702075.svg"
+import Navbar from './Navbar'
 // import shoppingbasket from "../lib/images/shoppingbasket.svg"
 // import pricetag from "../lib/images/pricetag.svg"
 // import beargoodcondition from "../lib/images/beargoodcondition.svg"
@@ -9,21 +9,7 @@ import noun_like_1702075 from "../lib/images/noun_like_1702075.svg"
 export default function showImages (props){
     return (
       <div className="container">
-        <div className="header">
-          <img src={Logo_1} alt="logo"/>
-          <div className="title">
-            <h1>Kid to Kid</h1>
-          </div>
-        </div>
-
-        <div className = "navbar">
-          <a>Product</a>
-          <a>Gender</a>
-          <a>Size</a>
-          <a>Price</a>
-          <a>Condition</a>
-        </div>
-
+        <Navbar/>
         <div className="content">
 
           <div className = "product-swipe-info">

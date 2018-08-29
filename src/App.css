@@ -34,7 +34,7 @@ body {
 }
 
 /* Style the topnav links */
-.navbar a {
+.navbar .dd-wrapper {
   float: left;
   display: block;
   color: black;
