@@ -71,18 +71,16 @@ export function filterAge(age){
   }
 }
 
-export function filterPrice(price){
+export function filterPrice(array){
   return {
     type: 'FILTER_PRICE',
-    payload: price
+    payload: array
   }
 }
 
-export function filterCondition(){
+export function filterCondition(condition){
   return {
     type: 'FILTER_CONDITION',
-    payload: {
-      
-    }
+    payload: condition
   }
 }

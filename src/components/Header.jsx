@@ -5,7 +5,7 @@ import DropdownAge from './DropdownAge'
 import DropdownPrice from './DropdownPrice'
 import DropdownCondition from './DropdownCondition'
 import {connect} from 'react-redux';
-import {filterCategory, filterGender, filterAge, filterPrice, showImage} from '../actions/images'
+import {filterCategory, filterGender, filterAge, filterPrice, filterCondition, showImage} from '../actions/images'
 
 
 class Header extends React.PureComponent {
@@ -23,7 +23,33 @@ class Header extends React.PureComponent {
   }
 
   choosePrice = (event) => {
-    this.props.filterPrice(event.target.textContent.toLowerCase())
+    let itemPrice = event.target.textContent.toLowerCase()
+    
+    if(itemPrice === "0"){
+      this.props.filterPrice(this.props.images.images.filter(item => item.price===0))
+    } 
+    else if (itemPrice === "1-10"){
+      this.props.filterPrice(this.props.images.images.filter(item => item.price>0 && item.price <= 10))
+    }
+    else if (itemPrice === "11-20"){
+      this.props.filterPrice(this.props.images.images.filter(item => item.price>10 && item.price <= 20))
+    }
+    else if (itemPrice === "21-30"){
+      this.props.filterPrice(this.props.images.images.filter(item => item.price>20 && item.price <= 30))
+    }
+    else if (itemPrice === "31-40"){
+      this.props.filterPrice(this.props.images.images.filter(item => item.price>30 && item.price <= 40))
+    }
+    else if (itemPrice === "41-50"){
+      this.props.filterPrice(this.props.images.images.filter(item => item.price>40 && item.price <= 50))
+    }
+    else if (itemPrice === "50+"){
+      this.props.filterPrice(this.props.images.images.filter(item => item.price > 50))
+    }
+  }
+
+  chooseCondition = (event) => {
+    this.props.filterCondition(event.target.textContent.toLowerCase())
   }
 
   componentDidUpdate = (prevProps) => {
@@ -39,7 +65,7 @@ class Header extends React.PureComponent {
         <DropdownGender chooseGender={this.chooseGender}/>
         <DropdownAge chooseAge={this.chooseAge}/>
         <DropdownPrice choosePrice={this.choosePrice}/>
-        <DropdownCondition/>
+        <DropdownCondition chooseCondition={this.chooseCondition}/>
       </div>
     )
   }
@@ -50,4 +76,4 @@ const mapStateToProps = (state) => ({
   images: state.images
  })
 
-export default connect(mapStateToProps, {filterCategory, filterGender, filterAge, filterPrice, showImage})(Header)
+export default connect(mapStateToProps, {filterCategory, filterGender, filterAge, filterPrice, filterCondition, showImage})(Header)

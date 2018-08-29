@@ -37,13 +37,13 @@ const reducer = (state = {images: images, selectedImage: {}, cart:[]}, action = 
         images: images.filter((item) => item.age===action.payload )
       }  
       case FILTER_PRICE:
-        return{
-
+        return{...state,
+          images: [...state.images = action.payload]
         } 
       case FILTER_CONDITION:
-        return{
-
-        } 
+        return{...state,
+          images: images.filter((item) => item.condition===action.payload )
+        }
       default:
         return state
     }

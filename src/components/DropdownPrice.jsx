@@ -2,7 +2,7 @@ import * as React from 'react'
 import '../App.css'
 const FontAwesome = require('react-fontawesome');
 
-const prices = ["0", "0-25" , "25-50", "50-75", "75-100", "100+"]
+const prices = ["0", "1-10" , "11-20", "21-30", "31-40", "41-50", "50+"]
 
 export default class selectCPrice extends React.PureComponent{
     constructor(props){
