@@ -6,7 +6,7 @@ import '../LandingPage.css';
 export default function WelcomePageText() {
   return (
     <div className='grid-container'>
-      <div classname='wrapper'>
+      <div className='wrapper'>
       <header className="header">
         <h1>Some title!</h1>
       </header>
