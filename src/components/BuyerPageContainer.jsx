@@ -1,5 +1,6 @@
 import * as React from 'react'
 import BuyerPage from './BuyerPage'
+import Header from './Header'
 import {connect} from 'react-redux';
 import {showImage, nextItem, dontWantItem} from '../actions/images'
 import { Link } from 'react-router-dom'
@@ -25,6 +26,7 @@ class BuyerPageContainer extends React.PureComponent {
  
     return(
       <div className = "image-and-buttons-container">
+        <Header/>
         <BuyerPage 
         title={this.props.images.selectedImage.title}
         url={this.props.images.selectedImage.imageUrl}
