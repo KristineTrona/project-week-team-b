@@ -3,12 +3,22 @@
 
 .grid-container {
     display: grid;
-    grid-column-gap: 50px;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
   }
 
-.text-wrapper {
+/* .text-wrapper {
     width: 50%; 
     font-family: 'Lato', sans-serif;
     margin: 0 auto;
     background-color: aquamarine
-}
+} */
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
