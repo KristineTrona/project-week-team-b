@@ -44,11 +44,11 @@ export function nextItem(images, index){
 }
 
 
-export function dontWantItem(currentId){
+export function dontWantItem(images,index){
   return {
     type: 'DONT_ITEM',
     payload: {
-      selectedImage: images.find((image) => image.id===currentId+1),
+      selectedImage: images[index+1],
     }
   }
 }

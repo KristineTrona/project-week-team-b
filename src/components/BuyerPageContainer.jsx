@@ -14,7 +14,8 @@ class BuyerPageContainer extends React.PureComponent {
   }
 
   handleClickNoEvent = () => {
-    this.props.dontWantItem(this.props.images.selectedImage.id)
+    const currentIndex = this.props.images.images.findIndex(x => x.id ===this.props.images.selectedImage.id)
+    this.props.dontWantItem(this.props.images.images, currentIndex)
   }
 
   componentDidMount = () =>  {
