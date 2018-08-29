@@ -6,11 +6,11 @@
 
 body {
   margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 .header {
   grid-area: header;
-  background-color: #f1f1f1;
   padding: 10px;
   text-align: center;
   font-size: 72px;
@@ -51,9 +51,34 @@ body {
 
 /* Style the content */
 .content {
-  background-color: #ddd;
   padding: 10px;
-  height: 200px; /* Should be removed. Only for demonstration */
+  font-family: 'Lato', sans-serif;
+}
+
+.product-swipe-info {
+  width: 80%;
+  margin: 4% auto;
+  height: 400px;
+  display:flex;
+}
+
+.product {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.btn {
+  border: none; 
+  padding: 12px 16px; 
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Style the footer */
@@ -62,96 +87,21 @@ body {
   padding: 10px;
 }
 
-
-
-
-/* .App {
-  text-align: center;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.wrapper {
-  text-align: center;
-  width: 100%;
-}
-
-.image-container { */
- /* display: grid;*/
-  /*grid-auto-rows: 1fr, 3fr, 2fr, 1fr;*/
-  /* margin: 0; */
-  /* text-align: center; */
-/* } */
-
-/*.image-and-buttons-container{
-  display:grid;
-  grid-template-columns: 1fr 2fr 1fr
-}*/
-
-/* .header {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  margin-bottom: 6%;
- }
-
-div.header {
-  color: #564F4D;
-  font-family:'Lato', sans-serif;
-  font-style: regular;
-  font-size: 26px;
-  line-height: 31px;
-  text-align: center;
-  letter-spacing: 10%;
-}
-
-.image-swipe {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr)
-}
-.image-swipe img {
-  max-width: 350px;
-  max-height: 350px;
-}
-
-.product-swipe-info {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  margin-bottom: 5%;
-}
-
 .description-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 50%;
-  margin: 0 auto;
-  border: solid black;
+  text-align: center;
 }
 
-.description-container div {
-  margin: 0 auto;
+.btn-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.description-icon-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 50%;
-  margin: 0 auto;
+.product-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-.description-icon-container div {
-  height: 60px;
-  width: 60px;
-}
-
-.shopping-basket {
-  background-image: url(./lib/images/shoppingbasket.svg)
-}
-
-.pricetag {
-  background-image: url(./lib/images/pricetag.svg)
-} */ 
-
-
 
 
 html, body, div, span, applet, object, iframe,
