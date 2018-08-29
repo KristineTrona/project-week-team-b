@@ -7,22 +7,20 @@
 
 .buyer-wrapper {
   text-align: center;
-  background-color: blue;
   width: 100%
 }
 
 .image-container {
-  display: grid;
-  grid-auto-rows: 1fr, 3fr, 2fr, 1fr;
-  width: 100%;
+ /* display: grid;*/
+  /*grid-auto-rows: 1fr, 3fr, 2fr, 1fr;*/
   margin: 0;
   text-align: center;
 }
 
-.image-and-buttons-container{
+/*.image-and-buttons-container{
   display:grid;
   grid-template-columns: 1fr 2fr 1fr
-}
+}*/
 
 .header {
   display: grid;
@@ -31,11 +29,32 @@
 
 div.header {
   color: #564F4D;
+  font-family: lato;
+  font-style: regular;
+  font-size: 26px;
+  line-height: 31px;
+  text-align: center;
+  letter-spacing: 10%;
 }
 
+.image-swipe {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr)
+}
 .image-swipe img {
   max-width: 350px;
   max-height: 350px;
+}
+
+.description-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 500px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr)
 }
 
 /* #button-left{

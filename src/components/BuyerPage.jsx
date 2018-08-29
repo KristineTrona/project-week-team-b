@@ -19,9 +19,11 @@ export default function showImages (props){
           <button id = "right-button" onClick = {props.handleClickNo}>Right</button>
         </div>
         <div className = "product-swipe-info">
-        <h1>Title: {props.title}</h1>
+          <div className = "description-container">
+            <h3>Title: {props.title}</h3>
+            <p>Description: {props.description}</p>
+          </div>
           <p><span>Price: {props.price}</span><span>Condition: {props.condition}</span></p>
-          <p>Description: {props.description}</p>
           <button>BEAR</button>
           <button>MONEY</button>
           <button>Cart</button>
