@@ -1,5 +1,6 @@
 import * as React from 'react'
 import BuyerPage from './BuyerPage'
+import Header from './Header'
 import {connect} from 'react-redux';
 import {showImage, nextItem, dontWantItem} from '../actions/images'
 import { Link } from 'react-router-dom'
@@ -8,16 +9,17 @@ import { Link } from 'react-router-dom'
 class BuyerPageContainer extends React.PureComponent {
 
   handleClickYesEvent = () => {
-    this.props.nextItem(this.props.images.selectedImage.id)
-    localStorage.setItem(this.props.images.cart, this.props.images.selectedImage );
+    const currentIndex = this.props.images.images.findIndex(x => x.id ===this.props.images.selectedImage.id)
+    this.props.nextItem(this.props.images.images, currentIndex )
   }
 
   handleClickNoEvent = () => {
-    this.props.dontWantItem(this.props.images.selectedImage.id)
+    const currentIndex = this.props.images.images.findIndex(x => x.id ===this.props.images.selectedImage.id)
+    this.props.dontWantItem(this.props.images.images, currentIndex)
   }
 
   componentDidMount = () =>  {
-    this.props.showImage()
+    this.props.showImage(this.props.images.images)
   }
 
 
@@ -25,6 +27,7 @@ class BuyerPageContainer extends React.PureComponent {
  
     return(
       <div className = "image-and-buttons-container">
+        <Header/>
         <BuyerPage 
         title={this.props.images.selectedImage.title}
         url={this.props.images.selectedImage.imageUrl}
