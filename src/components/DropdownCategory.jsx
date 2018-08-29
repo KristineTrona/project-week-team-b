@@ -1,17 +1,48 @@
 import * as React from 'react'
 import '../App.css'
+const FontAwesome = require('react-fontawesome');
 
-export default function selectCategory (props){
-    return (
-      <div className = "dropdown">
-        <div className="dd-header">
-           <div className="dd-header-title"></div>
+
+const categories = ["Toys", "Clothes", "Furniture"]
+
+export default class selectCategory extends React.PureComponent{
+    constructor(props){
+      super(props)
+      this.state = {
+        listOpen: false,
+      }
+    }
+
+    handleClickOutside(){
+      this.setState({
+        listOpen: false
+      })
+    }
+    toggleList(){
+      this.setState(prevState => ({
+        listOpen: !prevState.listOpen
+      }))
+    }
+
+    render(){
+      
+      const{listOpen} = this.state
+      return (
+      <div className = "dd-wrapper">
+        <div className="dd-header" onClick={() => this.toggleList()}>
+          <div className="dd-header-title">Select Product</div>
+          {listOpen
+          ? <FontAwesome name="angle-up" size="2x"/>
+          : <FontAwesome name="angle-down" size="2x"/>
+        }
         </div>
-        <ul className="dd-list">
-          <li className="dd-list-item"></li>
-          <li className="dd-list-item"></li>
-          <li className="dd-list-item"></li>
-        </ul>   
+
+        {listOpen && <ul className="dd-list">
+          {categories.map((category) => (
+          <li className="dd-list-item" key={category} >{category}</li>
+          ))}
+        </ul>}
       </div>
     )
   }
+}
