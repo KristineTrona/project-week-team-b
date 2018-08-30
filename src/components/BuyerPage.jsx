@@ -36,13 +36,13 @@ export default function showImages (props){
           </div>
           <div className = "description-icon-container">
             <div className = "bearIcons">{props.condition}</div>
-            <div className= "price-tag"><img className= "pricetag" src={pricetag}/>
+            <div className= "price-tag">
+            <img className= "pricetag" src={pricetag}/>
               <div className = "price-value">{props.price}</div>
             </div>
-            <Link to={'/cart'}>
-            <div className= "shopping-basket"><img className= "basket" src={shoppingbasket}/>
+            <Link to={'/cart'} className= "shopping-basket">
+              {/* <img className= "basket" src={shoppingbasket}/> */}
               <div className = "items-count">{props.count}</div>
-            </div>
             </Link>
           </div>
         </div>

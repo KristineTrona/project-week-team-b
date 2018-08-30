@@ -4,9 +4,31 @@
     box-sizing: border-box;
 }
 
-body {
+body, html {
   margin: 0;
   font-family: 'Lato', sans-serif;
+  height: 100%;
+}
+
+/* body, header{
+  height:30%;
+}
+
+body, .image-and-buttons-container{
+  height: 60%;
+}
+
+body, .footer{
+  height: 10%;
+} */
+
+.App{
+  position: relative;
+  height: 100%;
+}
+
+.landing-page-container{
+  height: 70%;
 }
 
 .header {
@@ -130,17 +152,17 @@ body {
 
 
 /* Style the footer */
-.footer {
+.footer{
   background-image: url("./lib/images/background-pattern.svg");
   background-size: 30%;
   padding: 10px;
-  height: 70px;
+  height: 30%;
 }
 
 .footer-social-media{
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 10px;
+  grid-template-columns: 10% 10% 10%;
+  grid-column-gap: 5%;
   margin-left: 30%;
   margin-right: 30%;
 }
@@ -151,7 +173,7 @@ body {
 }
 
 .social-media-button-background{
-  background-color: #7dc4b6;
+  background-color: lightblue;
   
 }
 
@@ -201,6 +223,12 @@ body {
   margin-right: auto; 
 }
 
+.shopping-basket{
+  background-image: url("./lib/images/shoppingbasket.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .items-count{
   text-decoration: none;
   text-align: center;
@@ -208,6 +236,10 @@ body {
   width: 23px;
   height: 23px;
   border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  top: 25px;
+  right: -75px;
 }
 
 .pricetag{
@@ -215,7 +247,6 @@ body {
   background-position-y: center;
   background-repeat: no-repeat; */
   display: block;
-
   margin-left: auto;
   margin-right: auto;
   width: 64px;
@@ -228,6 +259,7 @@ body {
   z-index: 1;
 }
 
+/*Landing Page*/
 
 
 
