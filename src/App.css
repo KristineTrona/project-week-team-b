@@ -137,6 +137,27 @@ body {
   position: relative;
 }
 
+/*Style the lower description section with buttons*/
+
+.description-container{
+  padding: 10px;
+  background-color: yellow;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.description-title{
+
+}
+
+.description-description{
+
+}
+
+
+
+
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

@@ -11,9 +11,9 @@ export default class Header extends React.PureComponent{
         <img src={Logo_1} alt="logo"/>
         <div className="title">
           <h1>
-            <span style={{color: "#7cba5b"}}>Kid </span>
-            <span style={{color: "#464c43"}}>to </span>
-            <span style={{color: '#d14e3a'}}>Kid </span>
+            <span style={{color: "#85BA12"}}>Kid </span>
+            <span style={{color: "#564F4D"}}>to </span>
+            <span style={{color: '#C34E59'}}>Kid </span>
           </h1>
         </div>
       </div>
