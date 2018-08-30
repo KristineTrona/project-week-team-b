@@ -5,25 +5,12 @@ import '../LandingPage.css';
 
 export default function WelcomePageText() {
   return (
-    <div className='grid-container'>
-      <div class="grid-item">1</div>
-  <div class="grid-item">2</div>
-  <div class="grid-item">3</div>  
-  <div class="grid-item">4</div>
-  <div class="grid-item">5</div>
-  <div class="grid-item">6</div>  
-  <div class="grid-item">7</div>
-  <div class="grid-item">8</div>
-  <div class="grid-item">9</div> 
-      <div classname='wrapper'>
-      <header className="header">
-        <h1>Some title!</h1>
-      </header>
+    <div className="container">
       <main className='main'>
         <div className='text-wrapper'>
-        <p>Lorem ipsum dolor amet brunch tousled labore, butcher sriracha drinking vinegar aliquip affogato plaid. Man braid chambray sint flannel retro tousled trust fund, cray sartorial. Neutra slow-carb ugh enim proident exercitation, velit hashtag nulla. Ullamco chicharrones godard succulents twee.</p>
+        <p>Lorem ipsum dolor amet brunch tousled labore, butcher sriracha drinking vinegar aliquip affogato plaid. Man braid chambray sint flannel retro tousled trust fund, cray sartorial. Neutra slow-carb ugh enim proident exercitation, velit hashtag nulla. Ullamco chicharrones godard succulents twee.</p><br />
 
-        <p>Minim lomo laboris, taiyaki twee tbh cronut officia fingerstache keytar skateboard. Roof party ennui pour-over banh mi copper mug intelligentsia. Tempor vice elit XOXO aliqua scenester freegan. Fanny pack +1 vinyl beard.</p>
+        <p>Minim lomo laboris, taiyaki twee tbh cronut officia fingerstache keytar skateboard. Roof party ennui pour-over banh mi copper mug intelligentsia. Tempor vice elit XOXO aliqua scenester freegan. Fanny pack +1 vinyl beard.</p><br />
 
         <p>Esse vegan vaporware heirloom chambray succulents chillwave air plant aute venmo. Ut exercitation +1, VHS iPhone celiac forage portland. Fam man braid cold-pressed put a bird on it wayfarers locavore twee crucifix offal shoreditch try-hard photo booth. Gochujang food truck cold-pressed marfa.</p>
         </div>
@@ -35,7 +22,6 @@ export default function WelcomePageText() {
       <footer className="footer">
           <div className= "footer-text" >Contact</div>
       </footer>
-    </div>
     </div>
   )
 }
