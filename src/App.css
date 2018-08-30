@@ -139,6 +139,11 @@ body, html {
   position: relative;
 }
 
+.last-image-text {
+  text-align: center;
+  padding: 10px;
+}
+
 
 /* Style the footer */
 .footer{

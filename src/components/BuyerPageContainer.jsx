@@ -7,13 +7,26 @@ import {showImage, nextItem, dontWantItem} from '../actions/images'
 class BuyerPageContainer extends React.PureComponent {
 
   handleClickYesEvent = () => {
+    if(this.props.images.images.length-1===this.props.images.images.findIndex(x => x.id ===this.props.images.selectedImage.id)){
+      this.changeLastImage()
+    } else{
     const currentIndex = this.props.images.images.findIndex(x => x.id ===this.props.images.selectedImage.id)
     this.props.nextItem(this.props.images.images, currentIndex )
+    }
+  } 
+
+  changeLastImage = () => {
+    let lastImage = document.getElementsByClassName("product-container")[0]
+    lastImage.innerHTML = "We currently do not have any more items in this category. Please select a different category to continue shopping!"
   }
 
   handleClickNoEvent = () => {
+    if(this.props.images.images.length-1===this.props.images.images.findIndex(x => x.id ===this.props.images.selectedImage.id)){
+      this.changeLastImage()
+    } else{
     const currentIndex = this.props.images.images.findIndex(x => x.id ===this.props.images.selectedImage.id)
     this.props.dontWantItem(this.props.images.images, currentIndex)
+    }
   }
 
   componentDidMount = () =>  {
