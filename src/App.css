@@ -10,18 +10,6 @@ body, html {
   height: 100%;
 }
 
-/* body, header{
-  height:30%;
-}
-
-body, .image-and-buttons-container{
-  height: 60%;
-}
-
-body, .footer{
-  height: 10%;
-} */
-
 .App{
   position: relative;
   height: 100%;
@@ -104,7 +92,7 @@ body, .footer{
 
 /* Style the content */
 .content {
-  padding: 10px;
+  padding: 20px;
   font-family: 'Lato', sans-serif;
 }
 
