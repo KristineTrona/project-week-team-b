@@ -5,7 +5,8 @@ import { Route } from 'react-router-dom'
 import LandingPage from './components/LandingPage'
 import SellerPageContainer from './components/SellerPageContainer';
 import ShoppingCartContainer from './components/ShoppingCartContainer';
-import Header from './components/Header'
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <Route exact path='/shop' component={BuyerPageContainer} />
         <Route exact path='/sell' component={SellerPageContainer} />
         <Route exact path='/cart' component={ShoppingCartContainer}/>
+        <Footer />
       </div>
     );
   }
