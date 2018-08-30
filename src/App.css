@@ -6,7 +6,6 @@
 
 body, html {
   margin: 0;
-  /* font-family: 'Lato', sans-serif; */
   height: 100%;
 }
 
@@ -137,11 +136,6 @@ body, html {
   width: 100%;
   height: 100%;
   position: relative;
-}
-
-.last-image-text {
-  text-align: center;
-  padding: 10px;
 }
 
 
