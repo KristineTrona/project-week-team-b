@@ -30,7 +30,7 @@ const reducer = (state = {images: images, selectedImage: {}, cart:[]}, action = 
 
       case FILTER_GENDER:
         return{...state,
-          images: state.images.filter((item) => item.gender===action.payload )
+          images: state.images.filter((item) => item.gender===action.payload)
         }  
       case FILTER_AGE:
         return{...state,
@@ -41,11 +41,7 @@ const reducer = (state = {images: images, selectedImage: {}, cart:[]}, action = 
         return{...state,
           images: state.images.filter((item) => item.priceGroup===action.payload )
         } 
-
-      // case FILTER_PRICE:
-      //   return{...state,
-      //     images: [...state.images = action.payload]
-      //   } 
+        
       case FILTER_CONDITION:
         return{...state,
           images: state.images.filter((item) => item.condition===action.payload )

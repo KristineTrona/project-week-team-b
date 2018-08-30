@@ -10,18 +10,6 @@ body, html {
   height: 100%;
 }
 
-/* body, header{
-  height:30%;
-}
-
-body, .image-and-buttons-container{
-  height: 60%;
-}
-
-body, .footer{
-  height: 10%;
-} */
-
 .App{
   position: relative;
   height: 100%;
@@ -55,7 +43,7 @@ body, .footer{
 /* Style the top navigation bar */
 .navbar {
   overflow: hidden;
-  background-color: lightblue;
+  background-color: rgba(84, 205, 195);
 }
 
 /* Style the topnav links */
@@ -76,13 +64,13 @@ body, .footer{
   text-align: center;
   padding: 14px 25px;
   text-decoration: none;
-  background-color: rgb(108, 170, 190);
+  background-color: #42a59d;
 }
 
 .dd-list{
   position: fixed;
   margin:14px 0px 0px 0px;
-  background-color: lightblue;
+  background-color: rgba(84, 205, 195);
   width: 100px;
   color: black;
   text-align: center;
@@ -98,14 +86,14 @@ body, .footer{
 .dd-list li:hover{
   list-style-type: none;
   padding: 5px;
-  background-color: rgb(108, 170, 190);
+  background-color: #42a59d;
   color: white;
 }
 
 
 /* Style the content */
 .content {
-  padding: 10px;
+  padding: 20px;
   font-family: 'Lato', sans-serif;
 }
 
@@ -157,25 +145,48 @@ body, .footer{
   background-image: url("./lib/images/background-pattern.svg");
   background-size: 30%;
   padding: 10px;
-  height: 30%;
 }
 
 .footer-social-media{
   display:grid;
-  grid-template-columns: 10% 10% 10%;
-  grid-column-gap: 5%;
-  margin-left: 30%;
-  margin-right: 30%;
+  grid-template-columns: 30px 30px 30px;
+  grid-column-gap: 30px;;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.twitter, .facebook, .instagram {
+.twitter {
   height: 20px;
   position: relative;
+  top: 7px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.facebook {
+  height: 20px;
+  position: relative;
+  top: 6px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ .instagram {
+  height: 20px;
+  position: relative;
+  top: 7px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .social-media-button-background{
-  background-color: lightblue;
-  
+  background-color:rgba(84, 205, 195);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
 }
 
 
@@ -185,8 +196,9 @@ body, .footer{
   padding: 10px;
   display: grid;
   grid-template-columns: 40% 60%;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 372px;
 }
 
 .description-title{
@@ -209,13 +221,24 @@ body, .footer{
 /*Style the price, cart and condition buttons*/
 
 .description-icon-container{
-  padding: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-left: 100px;
-  margin-right: 100px;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 372px;
 }
 
+.bearIcons{
+  width: 117px;
+}
+
+.bear{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
 
 .basket{
   height: 80px;
@@ -228,6 +251,7 @@ body, .footer{
   background-image: url("./lib/images/shoppingbasket.svg");
   background-repeat: no-repeat;
   background-position: center;
+  width: 117px;
 }
 
 .items-count{
@@ -239,25 +263,24 @@ body, .footer{
   border-radius: 50%;
   position: relative;
   z-index: 1;
-  top: 25px;
-  right: -75px;
+  top: 23px;
+  right: -70px;
 }
 
-.pricetag{
-  /* background-image: url("./lib/images/pricetag.svg");
-  background-position-y: center;
-  background-repeat: no-repeat; */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 64px;
+.price-tag{
+  background-image: url("./lib/images/pricetag.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 117px;
   height: 80px;
-  
+  margin-left: 20px;
 }
 
 .price-value{
   position: relative;
   z-index: 1;
+  top: 29px;
+  right: -60px;
 }
 
 /*Landing Page*/
@@ -314,14 +337,12 @@ body, .footer{
   text-align: center;
 }
 
-
-
-html, button, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+b, u, i, center, button,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -336,46 +357,3 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
