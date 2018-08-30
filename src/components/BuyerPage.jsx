@@ -24,7 +24,7 @@ export default function showImages (props){
             <button className="btn" onClick = {props.handleClickYes}><img src={noun_like_1702075}/></button> 
           </div>
           </div>
-
+          <div className = "lower-section-wrapper">
             <div className = "description-container">
               <div className = "description-title">
                 <h3>Title: {props.title}</h3>
@@ -39,6 +39,7 @@ export default function showImages (props){
             <div className= "pricetag">{props.price}</div>
             <div className= "shopping-basket">{props.count}</div>
           </div>
+        </div>
         </div>
         {/* <div className = "footer">
           <div className = "footer-contact-buyer">Contact</div>

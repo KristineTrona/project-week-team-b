@@ -30,8 +30,8 @@ class BuyerPageContainer extends React.PureComponent {
         title={this.props.images.selectedImage.title}
         url={this.props.images.selectedImage.imageUrl}
         price={this.props.images.selectedImage.price}
-        description={this.props.images.description}
-        condition={this.props.images.condition}
+        description={this.props.images.selectedImage.description}
+        condition={this.props.images.selectedImage.condition}
         handleClickYes={this.handleClickYesEvent}
         handleClickNo={this.handleClickNoEvent}
         />
