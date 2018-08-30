@@ -49,12 +49,6 @@ export default class SellerPage extends React.PureComponent {
     return (
     
     <div>
-      <div className="header">
-          <img src={Logo_1} alt="logo"/>
-          <div className="title">
-            <h1>Kid to Kid</h1>
-          </div>
-        </div>
       <h2>Add an item</h2>
     
       <form onSubmit={this.handleSubmit}>

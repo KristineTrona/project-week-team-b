@@ -14,11 +14,7 @@ export function showImage(imagesArray) {
   return {
     type: SHOW_IMAGE,
     payload: {
-<<<<<<< HEAD
-      selectedImage: images.find((image) => image.id===1) //it takes the dummy data as 'images', not the current state. Should be changed to current state in BuyerPageContainer
-=======
       selectedImage: imagesArray[0]
->>>>>>> 55b555aa11a113ce35166dc594ec269142fb5e89
     }
   }
 }
