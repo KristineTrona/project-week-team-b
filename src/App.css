@@ -15,6 +15,8 @@ body {
   text-align: center;
   font-size: 72px;
   font-family: 'Schoolbell', cursive;
+  background-image: url("./lib/images/background-pattern.svg");
+  background-size: 30%;
 }
 
 .header img {
@@ -59,11 +61,6 @@ body {
   margin:14px 0px 0px 0px;
   background-color: lightblue;
   width: 100px;
-  /* left:-14px; */
-  /* padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 10px; */
-  /* I cannot figure out how to position the dropdown right under the header*/
   color: black;
   text-align: center;
   z-index: 1;
@@ -115,12 +112,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* Style the footer */
-.footer {
-  background-color: #f1f1f1;
-  padding: 10px;
-}
-
 .description-container {
   text-align: center;
 }
@@ -137,6 +128,34 @@ body {
   position: relative;
 }
 
+
+/* Style the footer */
+.footer {
+  background-image: url("./lib/images/background-pattern.svg");
+  background-size: 30%;
+  padding: 10px;
+  height: 70px;
+}
+
+.footer-social-media{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.twitter, .facebook, .instagram {
+  height: 20px;
+  position: relative;
+}
+
+.social-media-button-background{
+  background-color: #7dc4b6;
+  
+}
+
+
 /*Style the description section*/
 
 .description-container{
@@ -150,16 +169,64 @@ body {
 .description-title{
   padding: 8px;
   font-weight: bold;
+  font-family: Lato;
+  font-style: Regular;
+  font-size: 18px;
+  color: #564F4D;
 }
 
 .description-description{
   text-align: left;
+  padding-top: 5px;
   padding-left: 5px;
-  font-size: 80%;
+  font-size: 90%;
+  color: #564F4D;
 }
 
-/*Style the lower buttons*/
+/*Style the price, cart and condition buttons*/
 
+.description-icon-container{
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+.basket{
+  height: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.items-count{
+  text-decoration: none;
+  text-align: center;
+  background: #FD8800;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+}
+
+.pricetag{
+  /* background-image: url("./lib/images/pricetag.svg");
+  background-position-y: center;
+  background-repeat: no-repeat; */
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 64px;
+  height: 80px;
+  
+}
+
+.price-value{
+  position: relative;
+  z-index: 1;
+}
 
 
 

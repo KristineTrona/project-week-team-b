@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Logo_1 from '../lib/images/Logo_1.svg'
 
-
 export default class Header extends React.PureComponent{
   
   
