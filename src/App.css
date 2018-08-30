@@ -6,13 +6,14 @@
 
 body, html {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  /* font-family: 'Lato', sans-serif; */
   height: 100%;
 }
 
 .App{
   position: relative;
   height: 100%;
+  font-family: 'Lato', sans-serif;
 }
 
 .landing-page-container{
@@ -283,26 +284,58 @@ body, html {
 }
 
 /*Landing Page*/
+.text-wrapper {
+  display: flex;
+}
 
+.text {
+  width:50%;
+  position: relative;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
 
+.right {
+  background-color: #fe9ea0;
+}
 
+.left {
+  background-color: #87dcd5;
+}
 
+.text p {
+  padding: 10%;
+  margin: 10%;
+  color: white;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+}
 
+.btn-landing {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: 10% auto;
+    width: 30%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.app-info {
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  margin: 2% 10%;
+  color: white;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
