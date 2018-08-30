@@ -6,7 +6,8 @@ const appUser = [
       lastName: "Stein",
       email: "jillstein20@gmail.com",
       phone: "064758239",
-      password: "mypassword"
+      password: "mypassword",
+      city: "Amsterdam"
     },
     {
       userId: 2,
