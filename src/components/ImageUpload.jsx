@@ -51,11 +51,6 @@ class ImageUpload extends React.PureComponent {
   }
 }
 
-
-
-
-
-
 export default ImageUpload
 
 
