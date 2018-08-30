@@ -1,7 +1,6 @@
 import * as React from 'react'
-import SellerPage from './SellerPage'
+import SellerPageForm from './SellerPageForm'
 import {connect} from 'react-redux';
-import ImageUpload from './ImageUpload'
 import { addItem } from '../actions/images'
 
 
@@ -10,14 +9,13 @@ class SellerPageContainer extends React.PureComponent {
     console.log(this.props.images)
     return (
       <div>
-        <SellerPage addItem={this.props.addItem} images={this.props.images}/>
+        <SellerPageForm addItem={this.props.addItem} images={this.props.images}/>
         {/* <ImageUpload /> */}
       </div>
     )
   }
 }
-  
-  
+    
 const mapStateToProps = (state) => ({
   images: state.images
  })

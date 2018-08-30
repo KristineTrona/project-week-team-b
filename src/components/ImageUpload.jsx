@@ -1,5 +1,5 @@
 import * as React from 'react'
-import SellerPage from './SellerPage'
+import SellerPage from './SellerPageForm'
 
 
 class ImageUpload extends React.PureComponent {

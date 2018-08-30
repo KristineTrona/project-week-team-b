@@ -1,10 +1,6 @@
 import * as React from 'react'
-import Logo_1 from '../lib/images/Logo_1.svg'
-import { timingSafeEqual } from 'crypto';
 
-
-
-export default class SellerPage extends React.PureComponent {
+export default class SellerPageForm extends React.PureComponent {
   state = { submitted: false}
 
   handleChange = (event) => {
@@ -12,10 +8,7 @@ export default class SellerPage extends React.PureComponent {
       const name = event.target.name
   
     this.setState(
-      {
-      [name]: value
-      }
-    )
+      {[name]: value})
   }
     
   handleSubmit = (event) => {
@@ -70,7 +63,7 @@ export default class SellerPage extends React.PureComponent {
       }
     }
     
-  
+    
   render() {
     if (!this.state.submitted) {
     return (
@@ -163,7 +156,9 @@ export default class SellerPage extends React.PureComponent {
           <h3>Price: €{this.state.price}</h3>
           <h3>Condition: {this.state.condition}</h3>
           <h3>Category: {this.state.category}</h3>
-          <img src={this.state.imageUrl} />
+          <h3>Age range: {this.state.age}</h3>
+          <h3>Gender: {this.state.gender}</h3>
+          <img src={this.state.imageUrl} alt="product" />
           <button className="btn-upload" onClick={this.toggle}>Upload another item</button>
           </div>
       )
