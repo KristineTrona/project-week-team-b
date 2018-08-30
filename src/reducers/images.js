@@ -25,21 +25,21 @@ const reducer = (state = {images: images, selectedImage: {}, cart:[]}, action = 
         }
       case FILTER_CATEGORY:
         return {...state,
-          images: images.filter((item) => item.category===action.payload )
+          images: state.images.filter((item) => item.category===action.payload )
         }
 
       case FILTER_GENDER:
         return{...state,
-          images: images.filter((item) => item.gender===action.payload )
+          images: state.images.filter((item) => item.gender===action.payload )
         }  
       case FILTER_AGE:
         return{...state,
-          images: images.filter((item) => item.age===action.payload )
+          images: state.images.filter((item) => item.age===action.payload )
       }  
 
        case FILTER_PRICE:
         return{...state,
-          images: images.filter((item) => item.priceGroup===action.payload )
+          images: state.images.filter((item) => item.priceGroup===action.payload )
         } 
 
       // case FILTER_PRICE:
@@ -48,7 +48,7 @@ const reducer = (state = {images: images, selectedImage: {}, cart:[]}, action = 
       //   } 
       case FILTER_CONDITION:
         return{...state,
-          images: images.filter((item) => item.condition===action.payload )
+          images: state.images.filter((item) => item.condition===action.payload )
         }
       default:
         return state

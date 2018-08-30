@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Logo_1 from '../lib/images/Logo_1.svg'
+import { timingSafeEqual } from 'crypto';
 
 
 
@@ -27,11 +28,11 @@ export default class SellerPage extends React.PureComponent {
       imageUrl: this.state.imageUrl,
       description: this.state.description,
       price: this.state.price,
-      priceGroup: "empty for now",
+      priceGroup: this.priceGroupGenerator(),
       condition: this.state.condition,
       category: this.state.category,
-      age: "empty for now",
-      gender: "empty for now"
+      age: this.state.age,
+      gender: this.state.gender
     })
     this.setState(
       {
@@ -45,6 +46,30 @@ export default class SellerPage extends React.PureComponent {
       submitted: !this.state.submitted
     })
   }
+
+  priceGroupGenerator = () => {
+    console.log(this.state.price)
+    const price = this.state.price
+      
+    if (price === 0) {
+          return '0'
+      } else if (price >= 1 && price <= 10) {
+          return '1-10' 
+      } else if (price >= 11 && price <= 20) {
+          return '11-20' 
+      } else if (price >= 21 && price <= 30) {
+          return '21-30' 
+      } else if (price >= 31 && price <= 40) {
+          return '31-40' 
+      } else if (price >= 41 && price <= 50) {
+          return '41-50' 
+      } else if (price >= 50) {
+          return '50+' 
+      } else {
+          return ''
+      }
+    }
+    
   
   render() {
     if (!this.state.submitted) {
@@ -109,7 +134,7 @@ export default class SellerPage extends React.PureComponent {
         </label><br />
         <label>
           Age range:
-          <select name="category" onChange={this.handleChange}>
+          <select name="age" onChange={this.handleChange}>
           <option value="">Please choose</option>
             <option value="0-2">0 - 2 years</option>
             <option value="2-4">2 - 4 years</option>
@@ -119,7 +144,7 @@ export default class SellerPage extends React.PureComponent {
         </label><br />
         <label>
           Gender:
-          <select name="category" onChange={this.handleChange}>
+          <select name="gender" onChange={this.handleChange}>
           <option value="">Please choose</option>
             <option value="girl">Girl</option>
             <option value="boy">Boy</option>
