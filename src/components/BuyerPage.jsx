@@ -38,8 +38,8 @@ export default function showImages (props){
             <div className= "price-tag">
               <div className = "price-value">{props.price}</div>
             </div>
-            <Link to={'/cart'} className= "shopping-basket">
-              <div className = "items-count">{props.count}</div>
+            <Link to={'/cart'} className= "shopping-basket" style={{textDecoration: "none"}}>
+              <div className = "items-count"> {props.count}</div>
             </Link>
           </div>
         </div>

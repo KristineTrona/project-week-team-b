@@ -54,7 +54,7 @@ body, .footer{
 /* Style the top navigation bar */
 .navbar {
   overflow: hidden;
-  background-color: lightblue;
+  background-color: rgba(84, 205, 195);
 }
 
 /* Style the topnav links */
@@ -75,13 +75,13 @@ body, .footer{
   text-align: center;
   padding: 14px 25px;
   text-decoration: none;
-  background-color: rgb(108, 170, 190);
+  background-color: #42a59d;
 }
 
 .dd-list{
   position: fixed;
   margin:14px 0px 0px 0px;
-  background-color: lightblue;
+  background-color: rgba(84, 205, 195);
   width: 100px;
   color: black;
   text-align: center;
@@ -97,7 +97,7 @@ body, .footer{
 .dd-list li:hover{
   list-style-type: none;
   padding: 5px;
-  background-color: rgb(108, 170, 190);
+  background-color: #42a59d;
   color: white;
 }
 
@@ -156,25 +156,48 @@ body, .footer{
   background-image: url("./lib/images/background-pattern.svg");
   background-size: 30%;
   padding: 10px;
-  height: 30%;
 }
 
 .footer-social-media{
   display:grid;
-  grid-template-columns: 10% 10% 10%;
-  grid-column-gap: 5%;
-  margin-left: 30%;
-  margin-right: 30%;
+  grid-template-columns: 30px 30px 30px;
+  grid-column-gap: 30px;;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.twitter, .facebook, .instagram {
+.twitter {
   height: 20px;
   position: relative;
+  top: 7px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.facebook {
+  height: 20px;
+  position: relative;
+  top: 6px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ .instagram {
+  height: 20px;
+  position: relative;
+  top: 7px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .social-media-button-background{
-  background-color: lightblue;
-  
+  background-color:rgba(84, 205, 195);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
 }
 
 
@@ -298,7 +321,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+b, u, i, center, button,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
