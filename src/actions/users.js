@@ -1,12 +1,9 @@
-import appUser from '../lib/userDummyData'
-
 export const SHOW_CONTACT = 'SHOW_CONTACT'
 
-export function showContact() {
+export function showContact(currentUser) {
     return {
       type: SHOW_CONTACT,
       payload: {
-        appUser
-      }
-    }
+        currentUser: currentUser
+    }}
   }

@@ -153,6 +153,7 @@
   width: 180px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 20px;
 }
 
 .twitter {
@@ -190,6 +191,10 @@
 
 
 /*Style the description section*/
+
+.lower-section-wrapper{
+  padding-top: 30px;
+}
 
 .description-container{
   padding: 10px;
@@ -236,7 +241,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 17px;
+  padding-left: 20px;
 }
 
 .basket{
@@ -339,6 +345,27 @@
   line-height: 29px;
   text-align: center;
 }
+
+/*Style seller page*/
+
+.seller-page-container{
+  height: 75vh;
+  background-color: #87dcd5;
+}
+
+.category-selector{
+  width: 291px;
+  height: 48px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #C34E59;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0%;
+  /* background: url("./lib/images/select-arrow.png") no-repeat right  */
+}
+
 
 @media (max-width: 600px) {
   .text-wrapper {
