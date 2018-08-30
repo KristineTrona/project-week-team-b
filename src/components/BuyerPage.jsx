@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import noun_wrong_1702071 from "../lib/images/noun_wrong_1702071.svg"
 import noun_like_1702075 from "../lib/images/noun_like_1702075.svg"
 import Navbar from './Navbar'
-import shoppingbasket from "../lib/images/shoppingbasket.svg"
-import pricetag from "../lib/images/pricetag.svg"
 import {renderBear} from "./renderBear"
 
 
@@ -36,14 +34,12 @@ export default function showImages (props){
               </div>
           </div>
           <div className = "description-icon-container">
-            <div className = "bearIcons"><img src={renderBear(props.condition)} alt="condition-bear"/></div>
+            <div className = "bearIcons"><img className = "bear" src={renderBear(props.condition)} alt="condition-bear"/></div>
             <div className= "price-tag">
-            <img className= "pricetag" src={pricetag}/>
               <div className = "price-value">{props.price}</div>
             </div>
-            <Link to={'/cart'} className= "shopping-basket">
-              {/* <img className= "basket" src={shoppingbasket}/> */}
-              <div className = "items-count">{props.count}</div>
+            <Link to={'/cart'} className= "shopping-basket" style={{textDecoration: "none"}}>
+              <div className = "items-count"> {props.count}</div>
             </Link>
           </div>
         </div>
