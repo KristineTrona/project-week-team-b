@@ -22,7 +22,6 @@ class BuyerPageContainer extends React.PureComponent {
 
 
   render() {
- 
     return(
       <div className = "image-and-buttons-container">
         <BuyerPage 

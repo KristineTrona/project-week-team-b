@@ -30,7 +30,7 @@ export function addItem(item) {
 
 export function nextItem(images, index){
   return {
-    type: 'NEXT_ITEM',
+    type: NEXT_ITEM,
     payload: {
       selectedImage: images[index+1],
       cart: images[index]
@@ -41,7 +41,7 @@ export function nextItem(images, index){
 
 export function dontWantItem(images,index){
   return {
-    type: 'DONT_ITEM',
+    type: DONT_ITEM,
     payload: {
       selectedImage: images[index+1],
     }

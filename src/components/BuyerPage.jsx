@@ -5,7 +5,8 @@ import noun_like_1702075 from "../lib/images/noun_like_1702075.svg"
 import Navbar from './Navbar'
 import shoppingbasket from "../lib/images/shoppingbasket.svg"
 import pricetag from "../lib/images/pricetag.svg"
-import beargoodcondition from "../lib/images/beargoodcondition.svg"
+import {renderBear} from "./renderBear"
+
 
 export default function showImages (props){
     return (
@@ -35,7 +36,7 @@ export default function showImages (props){
               </div>
           </div>
           <div className = "description-icon-container">
-            <div className = "bearIcons">{props.condition}</div>
+            <div className = "bearIcons"><img src={renderBear(props.condition)} alt="condition-bear"/></div>
             <div className= "price-tag">
             <img className= "pricetag" src={pricetag}/>
               <div className = "price-value">{props.price}</div>
