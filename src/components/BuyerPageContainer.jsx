@@ -23,7 +23,7 @@ class BuyerPageContainer extends React.PureComponent {
 
   render() {
     return(
-      <div className = "image-and-buttons-container">
+      <div className="buyer-page-container">
         <BuyerPage 
         title={this.props.images.selectedImage.title}
         url={this.props.images.selectedImage.imageUrl}
@@ -34,9 +34,7 @@ class BuyerPageContainer extends React.PureComponent {
         handleClickYes={this.handleClickYesEvent}
         handleClickNo={this.handleClickNoEvent}
         />
-        <div>
         </div>
-      </div>
     )}   
 }
 

@@ -8,7 +8,7 @@ import {renderBear} from "./renderBear"
 
 export default function showImages (props){
     return (
-      <div className="container">
+      <div>
         <Navbar/>
         <div className="content">
 
@@ -45,7 +45,6 @@ export default function showImages (props){
         </div>
         </div>
       </div>
-      
     )
   }
 
