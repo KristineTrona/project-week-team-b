@@ -4,7 +4,7 @@ import Logo_1 from '../lib/images/Logo_1.svg'
 
 
 export default class SellerPage extends React.PureComponent {
-  state= { submitted: false}
+  state = { submitted: false}
 
   handleChange = (event) => {
       const value = event.target.value
@@ -27,8 +27,11 @@ export default class SellerPage extends React.PureComponent {
       imageUrl: this.state.imageUrl,
       description: this.state.description,
       price: this.state.price,
+      priceGroup: "empty for now",
       condition: this.state.condition,
-      category: this.state.category
+      category: this.state.category,
+      age: "empty for now",
+      gender: "empty for now"
     })
     this.setState(
       {
@@ -42,12 +45,10 @@ export default class SellerPage extends React.PureComponent {
       submitted: !this.state.submitted
     })
   }
-
-    
+  
   render() {
     if (!this.state.submitted) {
     return (
-    
     <div>
       <h2>Add an item</h2>
     
@@ -88,22 +89,41 @@ export default class SellerPage extends React.PureComponent {
           onChange={this.handleChange} />
         </label><br />
         <label>
-          State:
+          Condition:
           <select name="condition" onChange={this.handleChange}>
           <option value="">Please choose</option>
-            <option value="condition1">condition1</option>
-            <option value="condition2">condition2</option>
-            <option value="condition3">condition3</option>
-            <option value="condition4">condition4</option>
+            <option value="brand new">Brand new</option>
+            <option value="as good as new">As good as new</option>
+            <option value="acceptable">Acceptable</option>
+            <option value="used">Used</option>
           </select>
         </label><br />
         <label>
           Category:
           <select name="category" onChange={this.handleChange}>
           <option value="">Please choose</option>
-            <option value="toy">toy</option>
-            <option value="furniture">furniture</option>
-            <option value="clothes">clothes</option>
+            <option value="toys">Toys</option>
+            <option value="furniture">Furniture</option>
+            <option value="clothes">Clothes</option>
+          </select>
+        </label><br />
+        <label>
+          Age range:
+          <select name="category" onChange={this.handleChange}>
+          <option value="">Please choose</option>
+            <option value="0-2">0 - 2 years</option>
+            <option value="2-4">2 - 4 years</option>
+            <option value="4-6">4 - 6 years</option>
+            <option value="6+">6 years and over</option>
+          </select>
+        </label><br />
+        <label>
+          Gender:
+          <select name="category" onChange={this.handleChange}>
+          <option value="">Please choose</option>
+            <option value="girl">Girl</option>
+            <option value="boy">Boy</option>
+            <option value="uni">Unisex</option>
           </select>
         </label><br />
         <input type="submit" value="Submit" /><br />
