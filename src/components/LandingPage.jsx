@@ -1,19 +1,11 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom';
 import '../LandingPage.css';
-import Logo_1 from '../lib/images/Logo_1.svg'
-
 
 
 export default function WelcomePageText() {
   return (
     <div className="container">
-        <div className="header">
-          <img src={Logo_1} alt="logo"/>
-          <div className="title">
-            <h1>Kid to Kid</h1>
-          </div>
-        </div>
       <main className='main'>
         <div className='text-wrapper'>
         <p>Lorem ipsum dolor amet brunch tousled labore, butcher sriracha drinking vinegar aliquip affogato plaid. Man braid chambray sint flannel retro tousled trust fund, cray sartorial. Neutra slow-carb ugh enim proident exercitation, velit hashtag nulla. Ullamco chicharrones godard succulents twee.</p><br />

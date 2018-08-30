@@ -8,16 +8,17 @@ import { Link } from 'react-router-dom'
 class BuyerPageContainer extends React.PureComponent {
 
   handleClickYesEvent = () => {
-    this.props.nextItem(this.props.images.selectedImage.id)
-    localStorage.setItem(this.props.images.cart, this.props.images.selectedImage );
+    const currentIndex = this.props.images.images.findIndex(x => x.id ===this.props.images.selectedImage.id)
+    this.props.nextItem(this.props.images.images, currentIndex )
   }
 
   handleClickNoEvent = () => {
-    this.props.dontWantItem(this.props.images.selectedImage.id)
+    const currentIndex = this.props.images.images.findIndex(x => x.id ===this.props.images.selectedImage.id)
+    this.props.dontWantItem(this.props.images.images, currentIndex)
   }
 
   componentDidMount = () =>  {
-    this.props.showImage()
+    this.props.showImage(this.props.images.images)
   }
 
 
@@ -29,7 +30,11 @@ class BuyerPageContainer extends React.PureComponent {
         url={this.props.images.selectedImage.imageUrl}
         price={this.props.images.selectedImage.price}
         description={this.props.images.selectedImage.description}
+<<<<<<< HEAD
         condition={this.props.images.condition}
+=======
+        condition={this.props.images.selectedImage.condition}
+>>>>>>> 55b555aa11a113ce35166dc594ec269142fb5e89
         handleClickYes={this.handleClickYesEvent}
         handleClickNo={this.handleClickNoEvent}
         />
