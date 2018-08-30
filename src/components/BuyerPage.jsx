@@ -1,10 +1,12 @@
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 import noun_wrong_1702071 from "../lib/images/noun_wrong_1702071.svg"
 import noun_like_1702075 from "../lib/images/noun_like_1702075.svg"
 import Navbar from './Navbar'
-// import shoppingbasket from "../lib/images/shoppingbasket.svg"
-// import pricetag from "../lib/images/pricetag.svg"
+import shoppingbasket from "../lib/images/shoppingbasket.svg"
+import pricetag from "../lib/images/pricetag.svg"
 import {renderBear} from "./renderBear"
+
 
 export default function showImages (props){
     return (
@@ -27,28 +29,27 @@ export default function showImages (props){
           <div className = "lower-section-wrapper">
             <div className = "description-container">
               <div className = "description-title">
-                <h3>Title: {props.title}</h3>
+                <h3>{props.title}</h3>
               </div>
               <div className = "description-description">
-                <p>Description: {props.description}</p>
+                <p>{props.description}</p>
               </div>
           </div>
           <div className = "description-icon-container">
-            <p><span>Price: {props.price}</span><span>Condition: {props.condition}</span></p>
             <div className = "bearIcons"><img src={renderBear(props.condition)} alt="condition-bear"/></div>
-            <div className= "pricetag">{props.price}</div>
-            <div className= "shopping-basket">{props.count}</div>
+            <div className= "price-tag">
+            <img className= "pricetag" src={pricetag}/>
+              <div className = "price-value">{props.price}</div>
+            </div>
+            <Link to={'/cart'} className= "shopping-basket">
+              {/* <img className= "basket" src={shoppingbasket}/> */}
+              <div className = "items-count">{props.count}</div>
+            </Link>
           </div>
         </div>
         </div>
-        {/* <div className = "footer">
-          <div className = "footer-contact-buyer">Contact</div>
-          <div className = "footer-social-buyer">Social Media</div>
-        </div> */}
       </div>
-        
-
-   
+      
     )
   }
 
