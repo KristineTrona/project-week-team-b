@@ -32,6 +32,7 @@ export default class SellerPageForm extends React.PureComponent {
         submitted: !this.state.submitted
       }
     )
+    this.renderStyle()
   }
 
   toggle = () => {
@@ -62,6 +63,14 @@ export default class SellerPageForm extends React.PureComponent {
       }
     }
 
+  renderStyle = () => {
+      if (this.state.submitted === true){
+        let description = document.getElementsByClassName("submitted-false")[0]
+        description.setAttribute("class", "submitted-true")
+      } 
+    }
+
+
     countWords = (event) => {
       let currentText = event.target.value
       let characterCount = currentText.length
@@ -70,7 +79,7 @@ export default class SellerPageForm extends React.PureComponent {
     
     
   render() {
-    if (!this.state.submitted) {
+    // if (!this.state.submitted) {
     return (
     <div>   
         <form onSubmit={this.handleSubmit} className = "seller-page-container">
@@ -153,15 +162,11 @@ export default class SellerPageForm extends React.PureComponent {
             <option value="uni">Unisex</option>
           </select>
         </label><br />
+        <div>
         <input className = "submit-button" type="submit" value="Submit" /><br />
         </div>
-      </form>
-    <div>
-    </div>
-    </div>)
-    } else {
-      return (
-        <div> 
+        </div>
+      <div className= "submitted-false">
           <h1>You have submitted the following item:</h1>
           <h3>Title: {this.state.title}</h3>
           <h3>Description: {this.state.description}</h3>
@@ -172,9 +177,31 @@ export default class SellerPageForm extends React.PureComponent {
           <h3>Gender: {this.state.gender}</h3>
           <img src={this.state.imageUrl} alt="product" />
           <button className="btn-upload" onClick={this.toggle}>Upload another item</button>
-          </div>
-      )
-    }
-  }
+      </div>
+      </form>
+    </div>)
+    } 
+  // }
 }
+
+
+
+
+
+    // else {
+    //   return (
+    //     <div> 
+    //       <h1>You have submitted the following item:</h1>
+    //       <h3>Title: {this.state.title}</h3>
+    //       <h3>Description: {this.state.description}</h3>
+    //       <h3>Price: €{this.state.price}</h3>
+    //       <h3>Condition: {this.state.condition}</h3>
+    //       <h3>Category: {this.state.category}</h3>
+    //       <h3>Age range: {this.state.age}</h3>
+    //       <h3>Gender: {this.state.gender}</h3>
+    //       <img src={this.state.imageUrl} alt="product" />
+    //       <button className="btn-upload" onClick={this.toggle}>Upload another item</button>
+    //       </div>
+    //   )
+    // }
     

@@ -354,6 +354,7 @@
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .seller-page-left{
@@ -380,7 +381,7 @@
   width: 291px;
   height: 48px;
   padding: 12px 20px;
-  margin: 20px 15px 48px;
+  margin: 15px 15px 10px;
   box-sizing: border-box;
   border: 2px solid #C34E59;
   -webkit-appearance: none;
@@ -396,7 +397,7 @@
   width: 291px;
   height: 48px;
   padding: 12px 20px;
-  margin: 20px 15px 48px;
+  margin: 15px 15px 10px;
   box-sizing: border-box;
   border: 2px solid #C34E59;
   -webkit-appearance: none;
@@ -408,7 +409,7 @@
   width: 291px;
   height: 48px;
   padding: 12px 20px;
-  margin: 20px 15px 48px;
+  margin: 15px 15px 10px;
   box-sizing: border-box;
   border: 2px solid #C34E59;
   -webkit-appearance: none;
@@ -425,7 +426,7 @@
   margin-right: 15px;
   color: black;
   position: relative;
-  top: -40px;
+  top: -5px;
 }
 
 .description-character-count{
@@ -437,14 +438,14 @@
   margin-right: 15px;
   color: black;
   position: relative;
-  top: -15px;
+  top: -13px;
 }
 
 .select-price{
   width: 291px;
   height: 48px;
   padding: 12px 20px;
-  margin: 20px 15px;
+  margin: 15px 15px;
   box-sizing: border-box;
   border: 2px solid #C34E59;
   -webkit-appearance: none;
@@ -454,9 +455,9 @@
 
 .select-description{
   width: 291px;
-  height: 130px;
+  height: 100px;
   padding: 12px 20px;
-  margin: 20px 15px;
+  margin: 15px 15px;
   box-sizing: border-box;
   border: 2px solid #C34E59;
   -webkit-appearance: none;
@@ -468,7 +469,7 @@
   width: 291px;
   height: 48px;
   padding: 12px 20px;
-  margin: 20px 15px;
+  margin: 0px 15px 10px;
   box-sizing: border-box;
   border: 2px solid #C34E59;
   -webkit-appearance: none;
@@ -480,7 +481,7 @@
   width: 291px;
   height: 48px;
   padding: 12px 20px;
-  margin: 20px 15px;
+  margin: 15px 15px;
   box-sizing: border-box;
   border: 2px solid #C34E59;
   -webkit-appearance: none;
@@ -496,13 +497,22 @@
   width: 291px;
   height: 48px;
   padding: 12px 20px;
-  margin: 20px 15px;
+  margin: 15px 15px;
   box-sizing: border-box;
   border: 2px solid #C34E59;
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
   border-radius: 0%;
 } 
+
+.submitted-true{
+  display: block;
+}
+
+.submitted-false{
+  display: none;
+}
+
 
 
 @media (max-width: 600px) {
