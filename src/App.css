@@ -42,7 +42,9 @@
 /* Style the top navigation bar */
 .navbar {
   overflow: hidden;
-  background-color: rgba(84, 205, 195);
+  background-color:white;
+  margin: 0 auto;
+  width: 75%;
 }
 
 /* Style the topnav links */
@@ -52,8 +54,12 @@
   display: block;
   color: black;
   text-align: center;
-  padding: 14px 25px;
+  padding: 14px 0px;
   text-decoration: none;
+  font-size: 18px;
+  width: 15%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 
 .dd-wrapper:hover{
@@ -61,7 +67,7 @@
   display: block;
   color:white;
   text-align: center;
-  padding: 14px 25px;
+  padding: 14px 0px;
   text-decoration: none;
   background-color: #42a59d;
 }
@@ -94,7 +100,6 @@
 .content {
   padding: 20px;
   font-family: 'Lato', sans-serif;
-  height: 75vh;
 }
 
 .product-swipe-info {
@@ -191,11 +196,6 @@
 
 
 /*Style the description section*/
-
-.lower-section-wrapper{
-  padding-top: 30px;
-}
-
 .description-container{
   padding: 10px;
   display: grid;
@@ -299,7 +299,6 @@
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  /* padding: 10px; */
   padding-top: 1vh;
   padding-bottom: 1vh;
 }
