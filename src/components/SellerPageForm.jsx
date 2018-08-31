@@ -67,13 +67,28 @@ export default class SellerPageForm extends React.PureComponent {
   render() {
     if (!this.state.submitted) {
     return (
-    <div>
-      <h2>Add an item</h2>
-    
+    <div className = "seller-page-container">    
       <form onSubmit={this.handleSubmit}>
+      <div className = "seller-page-left">
+      <label>
+          <p>Category</p>
+          <select className = "category-selector" name="category" onChange={this.handleChange}>
+          <option value="">Please choose</option>
+            <option value="toys">Toys</option>
+            <option value="furniture">Furniture</option>
+            <option value="clothes">Clothes</option>
+          </select>
+        </label><br />
         <label>
-          Title:
-          <input 
+          <p>Upload Image</p>
+          <input className = "select-image"
+          type="text" 
+          name="imageUrl" 
+          onChange={this.handleChange} />
+        </label><br />
+        <label>
+          <p>Title</p>
+          <input className = "select-title"
           type="text" 
           name="title" 
           pattern="[A-Za-z\s]+"
@@ -83,8 +98,18 @@ export default class SellerPageForm extends React.PureComponent {
           onChange={this.handleChange} />
         </label><br />
         <label>
-          Description:
-          <textarea
+          <p>Price</p>
+          <input type="number" className= "select-price"
+          name="price"
+          placeholder="price"
+          minLength="1"
+          onChange={this.handleChange} />
+        </label><br />
+        </div>
+        <div className = "seller-page-right">
+        <label>
+          <p>Description</p>
+          <textarea className= "select-description"
           name="description" 
           minLength="2" 
           maxLength="200" 
@@ -92,23 +117,8 @@ export default class SellerPageForm extends React.PureComponent {
           onChange={this.handleChange} />
         </label><br />
         <label>
-          Image URL:
-          <input 
-          type="text" 
-          name="imageUrl" 
-          onChange={this.handleChange} />
-        </label><br />
-        <label>
-          Price:
-          <input type="number" 
-          name="price"
-          placeholder="price"
-          minLength="1"
-          onChange={this.handleChange} />
-        </label><br />
-        <label>
-          Condition:
-          <select name="condition" onChange={this.handleChange}>
+          <p>Condition</p>
+          <select className = "select-condition" name="condition" onChange={this.handleChange}>
           <option value="">Please choose</option>
             <option value="brand new">Brand new</option>
             <option value="as good as new">As good as new</option>
@@ -117,17 +127,8 @@ export default class SellerPageForm extends React.PureComponent {
           </select>
         </label><br />
         <label>
-          Category:
-          <select name="category" onChange={this.handleChange}>
-          <option value="">Please choose</option>
-            <option value="toys">Toys</option>
-            <option value="furniture">Furniture</option>
-            <option value="clothes">Clothes</option>
-          </select>
-        </label><br />
-        <label>
-          Age range:
-          <select name="age" onChange={this.handleChange}>
+          <p>Age range</p>
+          <select className = "select-age" name="age" onChange={this.handleChange}>
           <option value="">Please choose</option>
             <option value="0-2">0 - 2 years</option>
             <option value="2-4">2 - 4 years</option>
@@ -136,15 +137,16 @@ export default class SellerPageForm extends React.PureComponent {
           </select>
         </label><br />
         <label>
-          Gender:
-          <select name="gender" onChange={this.handleChange}>
+          <p>Gender</p>
+          <select className = "select-gender" name="gender" onChange={this.handleChange}>
           <option value="">Please choose</option>
             <option value="girl">Girl</option>
             <option value="boy">Boy</option>
             <option value="uni">Unisex</option>
           </select>
         </label><br />
-        <input type="submit" value="Submit" /><br />
+        <input className = "submit-button" type="submit" value="Submit" /><br />
+      </div>
       </form>
     </div>)
     } else {

@@ -12,11 +12,13 @@ export default class Header extends React.PureComponent{
         <img src={Logo_1} alt="logo"/>
         </Link>
         <div className="title">
+        <Link to={'/'} style={{ textDecoration: 'none' }}>
           <h1>
             <span style={{color: "#85BA12"}}>Kid </span>
             <span style={{color: "#564F4D"}}>to </span>
             <span style={{color: '#C34E59'}}>Kid </span>
           </h1>
+          </Link>
         </div>
       </div>
     )

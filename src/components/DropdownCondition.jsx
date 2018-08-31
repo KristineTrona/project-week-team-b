@@ -29,7 +29,7 @@ export default class selectCondition extends React.PureComponent{
       return (
       <div className = "dd-wrapper" onClick={() => this.toggleList()}>
         <div className="dd-header">
-          <div className="dd-header-title">Condition</div>
+          <div className="dd-header-title">Condition &#9662;</div>
           {listOpen
           ? <FontAwesome name="angle-up" size="2x"/>
           : <FontAwesome name="angle-down" size="2x"/>

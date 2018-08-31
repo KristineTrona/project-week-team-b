@@ -33,6 +33,10 @@ class BuyerPageContainer extends React.PureComponent {
     this.props.showImage(this.props.images.images)
   }
 
+  allowDrop= (ev) => {
+    ev.preventDefault();
+}
+
 
   render() {
     return(
@@ -46,6 +50,7 @@ class BuyerPageContainer extends React.PureComponent {
         count={this.props.images.cart.length}
         handleClickYes={this.handleClickYesEvent}
         handleClickNo={this.handleClickNoEvent}
+        allowDrop={this.allowDrop}
         />
         </div>
     )}   
