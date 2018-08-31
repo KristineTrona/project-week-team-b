@@ -1,9 +1,11 @@
 
 import { SHOW_IMAGE, ADD_ITEM, NEXT_ITEM, DONT_ITEM, SHOW_CART_IMAGE_DETAILS } from '../actions/images'
-import { FILTER_CATEGORY, FILTER_GENDER, FILTER_AGE, FILTER_PRICE, FILTER_CONDITION} from '../actions/images'
+import { FILTER_CATEGORY, FILTER_GENDER, FILTER_AGE, FILTER_PRICE, FILTER_CONDITION, RESET_FILTER} from '../actions/images'
 import images from '../lib/dummyData'
 
-const reducer = (state = {images: images, selectedImage: {}, cart:[], selectedCartImage: {}}, action = {}) => {
+const initialState = {images: images, selectedImage: {}, cart:[], selectedCartImage: {}}
+
+const reducer = (state = initialState, action = {}) => {
     switch (action.type) {
       case SHOW_IMAGE:
         return { ...state, 
@@ -46,6 +48,10 @@ const reducer = (state = {images: images, selectedImage: {}, cart:[], selectedCa
         return{...state,
           images: state.images.filter((item) => item.condition===action.payload )
         }
+
+      case RESET_FILTER: 
+        return initialState
+
       case SHOW_CART_IMAGE_DETAILS:
         return { ...state, 
           selectedCartImage: {...state.selectedCartImage = action.payload.selectedCartImage}

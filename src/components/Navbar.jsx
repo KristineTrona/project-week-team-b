@@ -4,8 +4,9 @@ import DropdownGender from './DropdownGender'
 import DropdownAge from './DropdownAge'
 import DropdownPrice from './DropdownPrice'
 import DropdownCondition from './DropdownCondition'
+import ResetButton from './ResetButton'
 import {connect} from 'react-redux';
-import {filterCategory, filterGender, filterAge, filterPrice, filterCondition, showImage} from '../actions/images'
+import {filterCategory, filterGender, filterAge, filterPrice, filterCondition, resetFilter, showImage} from '../actions/images'
 
 
 class Navbar extends React.PureComponent {
@@ -44,6 +45,7 @@ class Navbar extends React.PureComponent {
         <DropdownAge chooseAge={this.chooseAge}/>
         <DropdownPrice choosePrice={this.choosePrice}/>
         <DropdownCondition chooseCondition={this.chooseCondition}/>
+        <ResetButton showImage={this.props.showImage} resetFilter={this.props.resetFilter}/>
       </div>
     )
   }
@@ -54,7 +56,7 @@ const mapStateToProps = (state) => ({
   images: state.images
  })
 
-export default connect(mapStateToProps, {filterCategory, filterGender, filterAge, filterPrice, filterCondition, showImage})(Navbar)
+export default connect(mapStateToProps, {filterCategory, filterGender, filterAge, filterPrice, filterCondition, resetFilter, showImage})(Navbar)
 
 
 
