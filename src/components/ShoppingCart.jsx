@@ -1,5 +1,7 @@
 import * as React from 'react'
 import '../cart.css'
+import  ItemSellerDescription  from './ItemSellerDescription'
+import CartClickForDetails from './CartClickForDetails'
 
 export default class ShoppingCart extends React.PureComponent {
   constructor(props) {
@@ -23,12 +25,14 @@ export default class ShoppingCart extends React.PureComponent {
             <div className="cart-right-half">
               <h2>Details</h2>
               <div className = "shopping-cart-details">
-              <div className="cart-user-details"><p><img className="selected-cart-item" src={this.props.currentItem} alt={this.props.itemTitle}/><br/>
-                {this.props.itemTitle}: {this.props.itemDescription}<br/> 
-                Price: {this.props.itemPrice}<br/> Condition: {this.props.itemCondition}</p></div>
-                <div className="cart-item-details"><p><h3>Seller</h3><br/>Username: {this.props.userName} <br/> Phone: {this.props.userPhone}<br/>
-                Email: {this.props.userEmail}<br/> City: {this.props.userCity}</p>
-                </div>
+                <ItemSellerDescription items={this.props.items} 
+                  handleImageClick={this.handleImageClick} displayItemDetails={this.displayItemDetails}
+                  itemTitle={this.props.itemTitle} itemPrice={this.props.itemPrice} 
+                  itemCondition={this.props.itemCondition} 
+                  itemDescription={this.props.itemDescription}
+                  userName={this.props.userName} userCity={this.props.userCity}
+                  userEmail={this.props.userEmail} userPhone={this.props.userPhone}
+                  currentUser={this.props.currentUser} currentItem={this.props.currentItem}/>
               </div>
             </div>
           </div>  
