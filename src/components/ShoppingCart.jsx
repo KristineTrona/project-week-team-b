@@ -16,11 +16,14 @@ export default class ShoppingCart extends React.PureComponent {
           <div className = "cart-items">
             <div className= "cart-left-half">
               <h2>Shopping Cart</h2>
+              <div className="cart-images-wrapper">
               <div className = "shopping-cart-images" >
                 {this.props.items.map(item =>
-                <img key={item.id} src={item.imageUrl} alt={item.title} onClick={() => this.props.handleImageClick(item.id)}/>
+                <img id={item.id} key={item.id} src={item.imageUrl} alt={item.title} 
+                onClick={() => this.props.handleImageClick(item.id)}/>
                 )}
               </div>
+            </div>
             </div>
             <div className="cart-right-half">
               <h2>Details</h2>
