@@ -37,7 +37,6 @@ class BuyerPageContainer extends React.PureComponent {
     ev.preventDefault();
 }
 
-
   render() {
     return(
       <div className="buyer-page-container">

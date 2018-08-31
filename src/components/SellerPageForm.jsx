@@ -1,4 +1,6 @@
 import * as React from 'react'
+import images from '../lib/dummyData'
+
 
 export default class SellerPageForm extends React.PureComponent {
   state = { submitted: false, words: 0}
@@ -14,8 +16,8 @@ export default class SellerPageForm extends React.PureComponent {
   handleSubmit = (event) => {
     event.preventDefault()
     event.target.reset()
-    
-    this.props.addItem({
+
+    const newItem = {
       id: this.props.images.images.length +1,          
       title: this.state.title,
       imageUrl: this.state.imageUrl,
@@ -26,7 +28,11 @@ export default class SellerPageForm extends React.PureComponent {
       category: this.state.category,
       age: this.state.age,
       gender: this.state.gender
-    })
+    }
+    
+    this.props.addItem(newItem)
+    images.push(newItem)
+
     this.setState(
       {
         submitted: !this.state.submitted
