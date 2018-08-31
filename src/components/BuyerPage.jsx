@@ -34,7 +34,7 @@ export default function showImages (props){
               </div>
           </div>
           <div className = "description-icon-container">
-            <div className = "bearIcons"><img className = "bear" src={renderBear(props.condition)} alt="condition-bear"/></div>
+            <div className = "bearIcons"><img className = "bear" src={renderBear(props.condition)} alt="condition-bear"/><p>{props.condition}</p></div>
             <div className= "price-tag">
               <div className = "price-value">{props.price}</div>
             </div>
