@@ -3,7 +3,7 @@ import images from '../lib/dummyData'
 
 
 export default class SellerPageForm extends React.PureComponent {
-  state = { submitted: false, title: 0, description: 0}
+  state = { submitted: false, title1: 0, description1: 0}
 
   handleChange = (event) => {
       const value = event.target.value
@@ -71,13 +71,13 @@ export default class SellerPageForm extends React.PureComponent {
     countWordsTitle = (event) => {
       let currentText = event.target.value
       let characterCount = currentText.length
-      this.setState({title: characterCount })
+      this.setState({title1: characterCount })
     }
 
     countWordsDescription = (event) => {
       let currentText = event.target.value
       let characterCount = currentText.length
-      this.setState({description: characterCount })
+      this.setState({description1: characterCount })
     }
     
     
@@ -114,7 +114,7 @@ export default class SellerPageForm extends React.PureComponent {
           minLength="2" 
           placeholder="title"
           onChange={this.handleChange && this.countWordsTitle} />
-        <div className="title-character-count">{this.state.title}/150</div>
+        <div className="title-character-count">{this.state.title1}/150</div>
         </label><br />
         <label>
           <p>Price</p>
@@ -134,7 +134,7 @@ export default class SellerPageForm extends React.PureComponent {
           maxLength="500" 
           placeholder="please enter description"
           onChange={this.handleChange && this.countWordsDescription} />
-          <div className = "description-character-count">{this.state.description}/500</div>
+          <div className = "description-character-count">{this.state.description1}/500</div>
         </label><br />
         <label>
           <p>Condition</p>
