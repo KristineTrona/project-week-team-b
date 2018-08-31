@@ -34,6 +34,7 @@ class ShoppingCartContainer extends React.PureComponent {
     const currentImage = this.props.images.cart.findIndex(x => x.id ===currentId)
     this.props.showCartImageDetails(this.props.images.cart, currentImage)
     this.displayUserDetails()
+
   }
 
   displayUserDetails = () => {

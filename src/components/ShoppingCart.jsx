@@ -21,12 +21,12 @@ export default class ShoppingCart extends React.PureComponent {
               </div>
             </div>
             <div className="cart-right-half">
-              <div className = "shopping-cart-details">
               <h2>Details</h2>
-              <div className="cart-user-details"><p><img className="selected-cart-item" src={this.props.currentItem} alt={this.props.itemTitle}/>
+              <div className = "shopping-cart-details">
+              <div className="cart-user-details"><p><img className="selected-cart-item" src={this.props.currentItem} alt={this.props.itemTitle}/><br/>
                 {this.props.itemTitle}: {this.props.itemDescription}<br/> 
                 Price: {this.props.itemPrice}<br/> Condition: {this.props.itemCondition}</p></div>
-                <div className="cart-item-details"><h3>Seller</h3><br/><p>Username: {this.props.userName} <br/> Phone: {this.props.userPhone}<br/>
+                <div className="cart-item-details"><p><h3>Seller</h3><br/>Username: {this.props.userName} <br/> Phone: {this.props.userPhone}<br/>
                 Email: {this.props.userEmail}<br/> City: {this.props.userCity}</p>
                 </div>
               </div>
