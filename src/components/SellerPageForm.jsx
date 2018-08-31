@@ -38,7 +38,6 @@ export default class SellerPageForm extends React.PureComponent {
         submitted: !this.state.submitted
       }
     )
-    this.renderStyle()
   }
 
   toggle = () => {

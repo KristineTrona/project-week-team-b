@@ -557,8 +557,14 @@
   margin-left: 20px;
 }
 
-
-
+.item-added-text{
+  width: 500px;
+  margin: 0 auto;
+  z-index: 5;
+  text-align: center;
+  color: #85BA12;
+  
+}
 
 
 @media (max-width: 600px) {

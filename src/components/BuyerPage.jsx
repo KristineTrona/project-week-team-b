@@ -10,8 +10,8 @@ export default function showImages (props){
     return (
       <div>
         <Navbar/>
+        <div className = "item-added-text"></div>
         <div className="content">
-
           <div className = "product-swipe-info">
 
           <div className="btn-container" onDrop={props.handleClickNo} onDragOver={props.allowDrop}>
