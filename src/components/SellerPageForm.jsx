@@ -3,7 +3,7 @@ import images from '../lib/dummyData'
 
 
 export default class SellerPageForm extends React.PureComponent {
-  state = { submitted: false}
+  state = { submitted: false, words: 0}
 
   handleChange = (event) => {
       const value = event.target.value
@@ -38,6 +38,7 @@ export default class SellerPageForm extends React.PureComponent {
         submitted: !this.state.submitted
       }
     )
+    this.renderStyle()
   }
 
   toggle = () => {
@@ -47,7 +48,6 @@ export default class SellerPageForm extends React.PureComponent {
   }
 
   priceGroupGenerator = () => {
-    console.log(this.state.price)
     const price = this.state.price
       
     if (price === 0) {
@@ -68,19 +68,32 @@ export default class SellerPageForm extends React.PureComponent {
           return ''
       }
     }
+
+  renderStyle = () => {
+      if (this.state.submitted === true){
+        let description = document.getElementsByClassName("submitted-false")[0]
+        description.setAttribute("class", "submitted-true")
+      } 
+    }
+
+
+    countWords = (event) => {
+      let currentText = event.target.value
+      let characterCount = currentText.length
+      this.setState({words: characterCount })
+    }
     
     
   render() {
-    console.log(images)
-    if (!this.state.submitted) {
+    // if (!this.state.submitted) {
     return (
-    <div className = "seller-page-container">    
-      <form onSubmit={this.handleSubmit}>
-      <div className = "seller-page-left">
-      <label>
+    <div>   
+        <form onSubmit={this.handleSubmit} className = "seller-page-container">
+        <div className = "seller-page-left"> 
+        <label>
           <p>Category</p>
           <select className = "category-selector" name="category" onChange={this.handleChange}>
-          <option value="">Please choose</option>
+          <option id = "arrow" value=""></option>
             <option value="toys">Toys</option>
             <option value="furniture">Furniture</option>
             <option value="clothes">Clothes</option>
@@ -91,6 +104,7 @@ export default class SellerPageForm extends React.PureComponent {
           <input className = "select-image"
           type="text" 
           name="imageUrl" 
+          placeholder="upload an image URL"
           onChange={this.handleChange} />
         </label><br />
         <label>
@@ -99,10 +113,11 @@ export default class SellerPageForm extends React.PureComponent {
           type="text" 
           name="title" 
           pattern="[A-Za-z\s]+"
-          maxLength="25" 
+          maxLength="150"
           minLength="2" 
           placeholder="title"
-          onChange={this.handleChange} />
+          onChange={this.handleChange && this.countWords} />
+        <div className="title-character-count">{this.state.words}/150</div>
         </label><br />
         <label>
           <p>Price</p>
@@ -112,21 +127,22 @@ export default class SellerPageForm extends React.PureComponent {
           minLength="1"
           onChange={this.handleChange} />
         </label><br />
-        </div>
-        <div className = "seller-page-right">
+      </div>
+      <div className = "seller-page-right">
         <label>
           <p>Description</p>
           <textarea className= "select-description"
           name="description" 
           minLength="2" 
-          maxLength="200" 
-          placeholder="description"
-          onChange={this.handleChange} />
+          maxLength="500" 
+          placeholder="please enter description (max 200 words)"
+          onChange={this.handleChange && this.countWords} />
+          <div className = "description-character-count">{this.state.words}/500</div>
         </label><br />
         <label>
           <p>Condition</p>
           <select className = "select-condition" name="condition" onChange={this.handleChange}>
-          <option value="">Please choose</option>
+          <option value=""></option>
             <option value="brand new">Brand new</option>
             <option value="as good as new">As good as new</option>
             <option value="acceptable">Acceptable</option>
@@ -136,7 +152,7 @@ export default class SellerPageForm extends React.PureComponent {
         <label>
           <p>Age range</p>
           <select className = "select-age" name="age" onChange={this.handleChange}>
-          <option value="">Please choose</option>
+          <option value=""></option>
             <option value="0-2">0 - 2 years</option>
             <option value="2-4">2 - 4 years</option>
             <option value="4-6">4 - 6 years</option>
@@ -146,19 +162,17 @@ export default class SellerPageForm extends React.PureComponent {
         <label>
           <p>Gender</p>
           <select className = "select-gender" name="gender" onChange={this.handleChange}>
-          <option value="">Please choose</option>
+          <option value=""></option>
             <option value="girl">Girl</option>
             <option value="boy">Boy</option>
             <option value="uni">Unisex</option>
           </select>
         </label><br />
+        <div>
         <input className = "submit-button" type="submit" value="Submit" /><br />
-      </div>
-      </form>
-    </div>)
-    } else {
-      return (
-        <div> 
+        </div>
+        </div>
+      <div className= "submitted-false">
           <h1>You have submitted the following item:</h1>
           <h3>Title: {this.state.title}</h3>
           <h3>Description: {this.state.description}</h3>
@@ -169,9 +183,31 @@ export default class SellerPageForm extends React.PureComponent {
           <h3>Gender: {this.state.gender}</h3>
           <img src={this.state.imageUrl} alt="product" />
           <button className="btn-upload" onClick={this.toggle}>Upload another item</button>
-          </div>
-      )
-    }
-  }
+      </div>
+      </form>
+    </div>)
+    } 
+  // }
 }
+
+
+
+
+
+    // else {
+    //   return (
+    //     <div> 
+    //       <h1>You have submitted the following item:</h1>
+    //       <h3>Title: {this.state.title}</h3>
+    //       <h3>Description: {this.state.description}</h3>
+    //       <h3>Price: €{this.state.price}</h3>
+    //       <h3>Condition: {this.state.condition}</h3>
+    //       <h3>Category: {this.state.category}</h3>
+    //       <h3>Age range: {this.state.age}</h3>
+    //       <h3>Gender: {this.state.gender}</h3>
+    //       <img src={this.state.imageUrl} alt="product" />
+    //       <button className="btn-upload" onClick={this.toggle}>Upload another item</button>
+    //       </div>
+    //   )
+    // }
     
