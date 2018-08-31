@@ -57,9 +57,9 @@
   padding: 14px 0px;
   text-decoration: none;
   font-size: 18px;
-  width: 10%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 15%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 
 .dd-wrapper:hover{
@@ -67,7 +67,7 @@
   display: block;
   color:white;
   text-align: center;
-  padding: 14px 25px;
+  padding: 14px 0px;
   text-decoration: none;
   background-color: #42a59d;
 }
@@ -100,7 +100,6 @@
 .content {
   padding: 20px;
   font-family: 'Lato', sans-serif;
-  height: 75vh;
 }
 
 .product-swipe-info {
@@ -197,11 +196,6 @@
 
 
 /*Style the description section*/
-
-.lower-section-wrapper{
-  padding-top: 30px;
-}
-
 .description-container{
   padding: 10px;
   display: grid;
