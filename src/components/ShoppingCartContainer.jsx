@@ -28,19 +28,13 @@ class ShoppingCartContainer extends React.PureComponent {
   // componentWillUpdate(nextProps, nextState) {
   //   localStorage.setItem("items", JSON.stringify(nextState.items))
   // }
-  selectPizza = (id) => {
-    console.log('selected pizza', id)
-    this.props.dispatch({
-      type: 'SELECT_PIZZA',
-      payload: id
-    })
-  }
 
   handleImageClick = (id) => {
     const currentId = id
     const currentImage = this.props.images.cart.findIndex(x => x.id ===currentId)
     this.props.showCartImageDetails(this.props.images.cart, currentImage)
     this.displayUserDetails()
+
   }
 
   displayUserDetails = () => {
@@ -58,7 +52,8 @@ class ShoppingCartContainer extends React.PureComponent {
         itemCondition={this.props.images.selectedCartImage.condition} 
         itemDescription={this.props.images.selectedCartImage.description}
         userName={this.props.users.currentUser.userName} userCity={this.props.users.currentUser.city}
-        userEmail={this.props.users.currentUser.email} userPhone={this.props.users.currentUser.phone}/>
+        userEmail={this.props.users.currentUser.email} userPhone={this.props.users.currentUser.phone}
+        currentUser={this.props.users.currentUser} currentItem={this.props.images.selectedCartImage.imageUrl}/>
       </div>
     )}  
 }
