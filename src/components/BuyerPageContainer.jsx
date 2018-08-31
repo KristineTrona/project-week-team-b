@@ -12,8 +12,19 @@ class BuyerPageContainer extends React.PureComponent {
     } else{
     const currentIndex = this.props.images.images.findIndex(x => x.id ===this.props.images.selectedImage.id)
     this.props.nextItem(this.props.images.images, currentIndex )
+     this.appearing()
+      }
     }
-  } 
+  
+  
+  appearing = () => {
+    const newPurchase = document.getElementsByClassName("item-added-text")[0]
+    newPurchase.innerHTML = "The item has succesfully been added to your cart!";
+    setTimeout(function(){ 
+        newPurchase.innerHTML = "";
+    }, 1500);
+  }
+  
   
   changeLastImage = () => {
     let lastImage = document.getElementsByClassName("product-container")[0]
