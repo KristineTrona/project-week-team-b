@@ -351,6 +351,7 @@
 .seller-page-container{
   height: 75vh;
   background-color: #87dcd5;
+  display: flex;
 }
 
 .category-selector{
@@ -364,6 +365,101 @@
   -webkit-border-radius: 0px;
   border-radius: 0%;
   /* background: url("./lib/images/select-arrow.png") no-repeat right  */
+}
+
+.select-image{
+  width: 291px;
+  height: 48px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #C34E59;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0%;
+}
+
+.select-title{
+  width: 291px;
+  height: 48px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #C34E59;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0%;
+}
+
+.select-price{
+  width: 291px;
+  height: 48px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #C34E59;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0%;
+}
+
+.select-description{
+  width: 291px;
+  height: 48px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #C34E59;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0%;
+}
+
+.select-condition{
+  width: 291px;
+  height: 48px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #C34E59;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0%;
+}
+
+.select-age{
+  width: 291px;
+  height: 48px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #C34E59;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0%;
+}
+
+.select-gender{
+  width: 291px;
+  height: 48px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #C34E59;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0%;
+} 
+
+.submit-button{
+  background-color: #85BA12;
+  border: none;
+  color: white;
+  padding: 7px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
 }
 
 
