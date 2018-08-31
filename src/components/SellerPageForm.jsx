@@ -67,8 +67,9 @@ export default class SellerPageForm extends React.PureComponent {
   render() {
     if (!this.state.submitted) {
     return (
-    <div>    
+    <div className = "seller-page-container">    
       <form onSubmit={this.handleSubmit}>
+      <div className = "seller-page-left">
       <label>
           <p>Category</p>
           <select className = "category-selector" name="category" onChange={this.handleChange}>
@@ -87,7 +88,7 @@ export default class SellerPageForm extends React.PureComponent {
         </label><br />
         <label>
           <p>Title</p>
-          <input 
+          <input className = "select-title"
           type="text" 
           name="title" 
           pattern="[A-Za-z\s]+"
@@ -104,6 +105,8 @@ export default class SellerPageForm extends React.PureComponent {
           minLength="1"
           onChange={this.handleChange} />
         </label><br />
+        </div>
+        <div className = "seller-page-right">
         <label>
           <p>Description</p>
           <textarea className= "select-description"
@@ -143,6 +146,7 @@ export default class SellerPageForm extends React.PureComponent {
           </select>
         </label><br />
         <input className = "submit-button" type="submit" value="Submit" /><br />
+      </div>
       </form>
     </div>)
     } else {
