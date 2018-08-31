@@ -383,7 +383,7 @@
   padding: 20px 20px 20px 20px;
 }
 
-.submit-button{
+.submit-button, .btn-upload{
   background-color: #85BA12;
   border: none;
   color: white;
@@ -493,6 +493,10 @@
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
   border-radius: 0%;
+  background: url("./lib/images/select-arrow.png") no-repeat right;
+  background-color: white;
+  background-position:94%;
+  background-size: 7%;
 }
 
 .select-age{
@@ -521,6 +525,10 @@
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
   border-radius: 0%;
+  background: url("./lib/images/select-arrow.png") no-repeat right;
+  background-color: white;
+  background-position:94%;
+  background-size: 7%;
 } 
 
 .submitted-true{
@@ -530,6 +538,26 @@
 .submitted-false{
   display: none;
 }
+
+.new-item-image{
+  max-width: 300px;
+  max-height: 300px;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding: 5px;
+}
+
+.new-item{
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.new-item-title, .new-item-description, .new-item-price, .new-item-condition, .new-item-category, .new-item-age, .new-item-gender{
+  margin-left: 20px;
+}
+
+
 
 
 
