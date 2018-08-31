@@ -9,8 +9,7 @@ class SellerPageContainer extends React.PureComponent {
     console.log(this.props.images)
     return (
       <div className = "seller-page-container">
-        <SellerPageForm addItem={this.props.addItem} images={this.props.images}/>
-        {/* <ImageUpload /> */}
+        <SellerPageForm addItem={this.props.addItem} images={this.props.images}/>       
       </div>
     )
   }
