@@ -61,3 +61,8 @@ h2 {
     border: solid black;
     text-align: left;
 }
+
+.selected-cart-item {
+    max-width: 50px;
+    max-height: 50px;
+}
