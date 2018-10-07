@@ -10,6 +10,7 @@ export const FILTER_AGE = 'FILTER_AGE'
 export const FILTER_PRICE = 'FILTER_PRICE'
 export const FILTER_CONDITION = 'FILTER_CONDITION'
 export const SHOW_CART_IMAGE_DETAILS = "SHOW_CART_IMAGE_DETAILS"
+export const RESET_FILTER = 'RESET_FILTER'
 
 export function showImage(imagesArray) {
   return {
@@ -83,6 +84,12 @@ export function filterCondition(condition){
   return {
     type: 'FILTER_CONDITION',
     payload: condition
+  }
+}
+
+export function resetFilter() {
+  return {
+    type: RESET_FILTER
   }
 }
 

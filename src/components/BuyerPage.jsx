@@ -8,19 +8,19 @@ import {renderBear} from "./renderBear"
 
 export default function showImages (props){
     return (
-      <div className="container">
+      <div>
         <Navbar/>
+        <div className = "item-added-text"></div>
         <div className="content">
-
           <div className = "product-swipe-info">
 
-          <div className="btn-container">
-            <button className="btn" onClick = {props.handleClickNo}><img src={noun_wrong_1702071}/></button>
+          <div className="btn-container" onDrop={props.handleClickNo} onDragOver={props.allowDrop}>
+            <button className="btn" onClick = {props.handleClickNo} ><img src={noun_wrong_1702071}/></button>
             </div>
           <div className="product-container"> 
-            <img className="product" src= {props.url} alt="item"/>
+            <img className="product" src= {props.url} alt="item" draggable="true"/>
             </div>
-            <div className="btn-container">
+            <div className="btn-container" onDrop={props.handleClickYes} onDragOver={props.allowDrop}>
             <button className="btn" onClick = {props.handleClickYes}><img src={noun_like_1702075}/></button> 
           </div>
           </div>
@@ -34,7 +34,7 @@ export default function showImages (props){
               </div>
           </div>
           <div className = "description-icon-container">
-            <div className = "bearIcons"><img className = "bear" src={renderBear(props.condition)} alt="condition-bear"/></div>
+            <div className = "bearIcons"><img className = "bear" src={renderBear(props.condition)} alt="condition-bear"/><p>{props.condition}</p></div>
             <div className= "price-tag">
               <div className = "price-value">{props.price}</div>
             </div>
@@ -45,7 +45,6 @@ export default function showImages (props){
         </div>
         </div>
       </div>
-      
     )
   }
 

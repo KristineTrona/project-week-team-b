@@ -29,7 +29,7 @@ export default class selectAge extends React.PureComponent{
       return (
       <div className = "dd-wrapper" onClick={() => this.toggleList()}>
         <div className="dd-header" >
-          <div className="dd-header-title">Age</div>
+          <div className="dd-header-title">Age &#9662;</div>
           {listOpen
           ? <FontAwesome name="angle-up" size="2x"/>
           : <FontAwesome name="angle-down" size="2x"/>
