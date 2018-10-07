@@ -25,7 +25,7 @@ class BuyerPageContainer extends React.PureComponent {
     }, 1500);
   }
   
-  
+
   changeLastImage = () => {
     let lastImage = document.getElementsByClassName("product-container")[0]
     lastImage.innerHTML = "We currently do not have any more items in this category. Please select a different category to continue shopping!"
@@ -62,7 +62,7 @@ class BuyerPageContainer extends React.PureComponent {
         handleClickNo={this.handleClickNoEvent}
         allowDrop={this.allowDrop}
         />
-        </div>
+      </div>
     )}   
 }
 
