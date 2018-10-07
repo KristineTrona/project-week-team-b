@@ -7,7 +7,7 @@ You can find the deployed version of this app on https://kid-to-kid.netlify.com/
 
 ## Motivation
 
-The idea behind this app is to give a common second-hand marketplace to parents, who want to either sell their kid's toys, clothes or other accessories or to buy them at a lower cost. The user is able to filter items based on their product type, gender, age, price or condition specifications. He can add the items he is interested in to the cart by clicking the green heart button on the right or dismiss them by clicking on the red cross button on the left. Once the user has selected a few items, he can view them by clicking on the cart icon. Selecting a product will then show the product description along with contact information of the seller. 
+  The idea behind this app is to give a common second-hand marketplace to parents, who want to either sell their kid's toys, clothes or other accessories or to buy them at a lower cost. The user is able to filter items based on their product type, gender, age, price or condition specifications. He can add the items he is interested in to the cart by clicking the green heart button on the right or dismiss them by clicking on the red cross button on the left. Once the user has selected a few items, he can view them by clicking on the cart icon. Selecting a product will then show the product description along with contact information of the seller. 
 
 ## Further improvements
 
